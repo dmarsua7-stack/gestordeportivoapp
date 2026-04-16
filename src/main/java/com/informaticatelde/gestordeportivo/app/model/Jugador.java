@@ -5,43 +5,46 @@ import java.sql.Date;
 public class Jugador {
 
     private Integer idJugador;
+    private String dniJug;
     private String nombre;
     private String apellido01;
     private String apellido02;
-    private String telefono01;
-    private String telefono02;
-    private String telefono03;
-    private String email01;
-    private String email02;
-    private String email03;
     private String foto;
     private Date fechaNac;
+    private String equipo;
     private String categoria;
     private String subcategoria;
+    private Integer dorsal;
     private String observaciones;
+    private Date fechaReg;
 
 
-    public void jugador (String nombre, String apellido01, String apellido02, String telefono01, String telefono02, String telefono03,
-                        String email01, String email02, String email03, String foto, Date fechaNac, String categoria, String subcategoria, String observaciones) {
-
+    public Jugador (String dniJug, String nombre, String apellido01, String apellido02,
+                         String foto, Date fechaNac, String equipo, String categoria, String subcategoria, Integer dorsal, String observaciones, Date fechaReg) {
+        this.dorsal = dorsal;
+        this.dniJug = dniJug;
         this.nombre = nombre;
         this.apellido01 = apellido01;
         this.apellido02 = apellido02;
-        this.telefono01 = telefono01;
-        this.telefono02 = telefono02;
-        this.telefono03 = telefono03;
-        this.email01 = email01;
-        this.email02 = email02;
-        this.email03 = email03;
         this.foto = foto;
         this.fechaNac= fechaNac;
+        this.equipo = equipo;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
         this.observaciones = observaciones;
+        this.fechaReg = fechaReg;
     }
 
     public Integer getIdJugador() {
         return idJugador;
+    }
+
+    public String getDniJug() {
+        return dniJug;
+    }
+
+    public void setDniJug(String dniJug) {
+        this.dniJug = dniJug;
     }
 
     public String getNombre() {
@@ -68,54 +71,6 @@ public class Jugador {
         this.apellido02 = apellido02;
     }
 
-    public String getTelefono01() {
-        return telefono01;
-    }
-
-    public void setTelefono01(String telefono01) {
-        this.telefono01 = telefono01;
-    }
-
-    public String getTelefono02() {
-        return telefono02;
-    }
-
-    public void setTelefono02(String telefono02) {
-        this.telefono02 = telefono02;
-    }
-
-    public String getTelefono03() {
-        return telefono03;
-    }
-
-    public void setTelefono03(String telefono03) {
-        this.telefono03 = telefono03;
-    }
-
-    public String getEmail01() {
-        return email01;
-    }
-
-    public void setEmail01(String email01) {
-        this.email01 = email01;
-    }
-
-    public String getEmail02() {
-        return email02;
-    }
-
-    public void setEmail02(String email02) {
-        this.email02 = email02;
-    }
-
-    public String getEmail03() {
-        return email03;
-    }
-
-    public void setEmail03(String email03) {
-        this.email03 = email03;
-    }
-
     public String getFoto() {
         return foto;
     }
@@ -130,6 +85,14 @@ public class Jugador {
 
     public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
+    }
+
+    public String getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(String equipo) {
+        this.equipo = equipo;
     }
 
     public String getCategoria() {
@@ -148,6 +111,14 @@ public class Jugador {
         this.subcategoria = subcategoria;
     }
 
+    public Integer getDorsal() {
+        return dorsal;
+    }
+
+    public void setDorsal(Integer dorsal) {
+        this.dorsal = dorsal;
+    }
+
     public String getObservaciones() {
         return observaciones;
     }
@@ -156,5 +127,11 @@ public class Jugador {
         this.observaciones = observaciones;
     }
 
+    public Date getFechaReg() {
+        return fechaReg;
+    }
 
+    public void setFechaReg(Date fechaReg) {
+        this.fechaReg = fechaReg;
+    }
 }
