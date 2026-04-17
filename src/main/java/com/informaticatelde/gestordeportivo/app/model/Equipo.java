@@ -1,24 +1,33 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 public class Equipo {
 
     private Integer idEquipo;
     private String nombre;
-    private Integer categoria_id;
-    private Integer subcategoria_id;
-    private Integer jugador_id; // Esto no iría con la lista de jugdores?
-    private Integer entrenador_id; // Entiendo que también se necesita una lista de entrenadores
-    private Integer multimedia_id; // Con esto se pretende añadir una foto de equipo
+    private Categoria categoria;
+    private Set<Jugador> jugadores;
+    private Set<Entrenador> entrenadores;
+    private Multimedia multimedia; // Con esto se pretende añadir una foto de equipo
 
-    public Equipo (String nombre, Integer categoria_id, Integer subcategoria_id,
-                   Integer jugador_id, Integer entrenador_id, Integer multimedia_id){
+    public Equipo (String nombre, Categoria categoria,
+                   Set<Jugador> jugadores, Set<Entrenador> entrenadores, Multimedia multimedia){
 
         this.nombre = nombre;
-        this.categoria_id = categoria_id;
-        this.subcategoria_id = subcategoria_id;
-        this.jugador_id = jugador_id;
-        this.entrenador_id = entrenador_id;
-        this.multimedia_id = multimedia_id;
+        this.categoria = categoria;
+        this.jugadores = jugadores;
+        this.entrenadores= entrenadores;
+        this.multimedia = multimedia;
+
+    }
+    public Equipo (String nombre, Categoria categoria){
+
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.jugadores = new TreeSet<Jugador>();
+        this.entrenadores= new TreeSet<Entrenador>();
 
     }
 
@@ -34,43 +43,35 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public Integer getCategoria_id() {
-        return categoria_id;
+    public Categoria getCategoria() {
+        return categoria;
     }
 
-    public void setCategoria_id(Integer categoria_id) {
-        this.categoria_id = categoria_id;
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
-    public Integer getSubcategoria_Id() {
-        return subcategoria_id;
+    public Set<Jugador> getJugadores() {
+        return jugadores;
     }
 
-    public void setSubcategoria_id(Integer subcategoria_id) {
-        this.subcategoria_id = subcategoria_id;
+    public void setJugadores(Set<Jugador> jugadores) {
+        this.jugadores = jugadores;
     }
 
-    public Integer getJugador_id() {
-        return jugador_id;
+    public Set<Entrenador> getEntrenadores() {
+        return entrenadores;
     }
 
-    public void setJugador_id(Integer jugador_id) {
-        this.jugador_id = jugador_id;
+    public void setEntrenadores(Set<Entrenador> entrenadores) {
+        this.entrenadores = entrenadores;
     }
 
-    public Integer getEntrenador_id() {
-        return entrenador_id;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setEntrenador_id(Integer entrenador_id) {
-        this.entrenador_id = entrenador_id;
-    }
-
-    public Integer getMultimedia_id() {
-        return multimedia_id;
-    }
-
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
     }
 }
