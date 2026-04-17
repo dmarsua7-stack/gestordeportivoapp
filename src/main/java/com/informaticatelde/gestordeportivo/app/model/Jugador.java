@@ -4,47 +4,50 @@ import java.sql.Date;
 
 public class Jugador {
 
-    private Integer idJug;
-    private String dniJug;
+    private Integer idJugador;
+    private String dniJugador;
     private String nombre;
     private String apellido01;
     private String apellido02;
     private Date fechaNac;
-    private String categoria; // Esto debería ser otra lista/clase
-    private String subcategoria; // Como anidamos categorias dependientes??
     private Integer dorsal;
     private String observaciones;
-    private Date fechaReg;
-    private String equipo_nombre; // Se debe unir por id?? Pq?
+    private Date fechaReg; // Sobra el set??
+    private Integer equipo_id; // Se debe unir por id?? Pq?
     private Integer multimedia_id; // Foto del jugador
+    private Integer categoria_id; // Esto debería ser otra lista/clase
+    private Integer subcategoria_id;
 
-    public Jugador (String dniJug, String nombre, String apellido01, String apellido02,
-                         String foto, Date fechaNac, String categoria, String subcategoria, Integer dorsal,
-                    String observaciones, Date fechaReg, String equipo_nombre, Integer multimedia_id ) {
-        this.dorsal = dorsal;
-        this.dniJug = dniJug;
+
+    public Jugador (String dniJugador, String nombre, String apellido01, String apellido02,
+                    Date fechaNac, Integer dorsal, String observaciones, Date fechaReg,
+                    Integer equipo_id, Integer multimedia_id, Integer categoria_id, Integer subcategoria_id) {
+
+        this.dniJugador = dniJugador;
         this.nombre = nombre;
         this.apellido01 = apellido01;
         this.apellido02 = apellido02;
         this.fechaNac= fechaNac;
-        this.categoria = categoria;
-        this.subcategoria = subcategoria;
+        this.dorsal = dorsal;
         this.observaciones = observaciones;
         this.fechaReg = fechaReg;
-        this.equipo_nombre = equipo_nombre;
+        this.equipo_id = equipo_id;
         this.multimedia_id = multimedia_id;
+        this.categoria_id = categoria_id;
+        this.subcategoria_id = subcategoria_id;
     }
 
-    public Integer getIdJug() {
-        return idJug;
+    public Integer getIdJugador() {
+        return idJugador;
     }
 
-    public String getDniJug() {
-        return dniJug;
+
+    public String getDniJugador() {
+        return dniJugador;
     }
 
-    public void setDniJug(String dniJug) {
-        this.dniJug = dniJug;
+    public void setDniJugador(String dniJugador) {
+        this.dniJugador = dniJugador;
     }
 
     public String getNombre() {
@@ -79,22 +82,6 @@ public class Jugador {
         this.fechaNac = fechaNac;
     }
 
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getSubcategoria() {
-        return subcategoria;
-    }
-
-    public void setSubcategoria(String subcategoria) {
-        this.subcategoria = subcategoria;
-    }
-
     public Integer getDorsal() {
         return dorsal;
     }
@@ -119,12 +106,12 @@ public class Jugador {
         this.fechaReg = fechaReg;
     }
 
-    public String getEquipo_nombre() {
-        return equipo_nombre;
+    public Integer getEquipo_id() {
+        return equipo_id;
     }
 
-    public void setEquipo_nombre(String equipo_nombre) {
-        this.equipo_nombre = equipo_nombre;
+    public void setEquipo_id(Integer equipo_id) {
+        this.equipo_id = equipo_id;
     }
 
     public Integer getMultimedia_id() {
@@ -133,5 +120,21 @@ public class Jugador {
 
     public void setMultimedia_id(Integer multimedia_id) {
         this.multimedia_id = multimedia_id;
+    }
+
+    public Integer getCategoria_id() {
+        return categoria_id;
+    }
+
+    public void setCategoria_id(Integer categoria_id) {
+        this.categoria_id = categoria_id;
+    }
+
+    public Integer getSubcategoria_id() {
+        return subcategoria_id;
+    }
+
+    public void setSubcategoria_id(Integer subcategoria_id) {
+        this.subcategoria_id = subcategoria_id;
     }
 }

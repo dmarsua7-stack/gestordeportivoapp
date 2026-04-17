@@ -2,46 +2,57 @@ package com.informaticatelde.gestordeportivo.app.model;
 
 public class Email {
 
-    private String idJugador;
-    private String email01;
-    private String email02;
-    private String email03;
 
-    public Email (String idJugador, String email01, String email02, String email03){
-        this.idJugador = idJugador;
-        this.email01 = email01;
-        this.email02 = email02;
-        this.email03 = email03;
+    private Integer idEmail;
+    private String nombre; // Referente al tipo de email como: email propio, madre o padre.
+    private String email;
+    private Integer jugador_id;
+    private Integer entrenador_id;
+
+
+    public Email (String nombre, String email,
+                    Integer jugador_id, Integer entrenador_id) {
+
+        this.nombre = nombre;
+        this.email = email;
+        this.jugador_id = jugador_id;
+        this.entrenador_id = entrenador_id;
+
     }
 
-
-    public String getidJugador() {
-        return idJugador;
+    public Integer getIdEmail() {
+        return idEmail;
     }
 
-    public String getEmail01() {
-        return email01;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEmail01(String email01) {
-        this.email01 = email01;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getEmail02() {
-        return email02;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmail02(String email02) {
-        this.email02 = email02;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getEmail03() {
-        return email03;
+    public Integer getJugador_id() {
+        return jugador_id;
     }
 
-    public void setEmail03(String email03) {
-        this.email03 = email03;
+    public void setJugador_id(Integer jugador_id) {
+        this.jugador_id = jugador_id;
     }
 
+    public Integer getEntrenador_id() {
+        return entrenador_id;
+    }
 
+    public void setEntrenador_id(Integer entrenador_id) {
+        this.entrenador_id = entrenador_id;
+    }
 }

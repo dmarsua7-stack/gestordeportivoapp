@@ -12,35 +12,32 @@ public class Evento {
     private String direccion;
     private String localidad;
     private String gmaps;
-    private String tipo;
-    private String categoria;
     private Date fecha;
     private Timestamp hora;
-    private Timestamp horaCon;
+    private Timestamp horaConcentracion;
     private Integer multimedia_id;
+    private Integer tipoEvento_id;
 
 
     public void Evento (String nombre, String ubicacion, String direccion, String localidad, String gmaps,
-                        String tipo, String categoria, Date fecha, Timestamp hora, Timestamp horaCon, Integer multimedia_id) {
+             Date fecha, Timestamp hora, Timestamp horaConcentracion, Integer multimedia_id, Integer tipoEvento_id) {
 
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.direccion = direccion;
         this.localidad = localidad;
         this.gmaps = gmaps;
-        this.tipo = tipo; // "Online / Físico ";
-        this.categoria =  categoria; // "Entrenamiento/Competición/Reunión/Fiesta";
         this.fecha = fecha;
         this.hora = hora;
-        this.horaCon = horaCon;
+        this.horaConcentracion = horaConcentracion;
         this.multimedia_id = multimedia_id;
+        this.tipoEvento_id = tipoEvento_id; // "Online / Físico " y tambien "Entrenamiento/Competición/Reunión/Fiesta";
 
     }
 
     public Integer getIdEvento() {
         return idEvento;
     }
-
 
     public String getNombre() {
         return nombre;
@@ -82,22 +79,6 @@ public class Evento {
         this.gmaps = gmaps;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
     public Date getFecha() {
         return fecha;
     }
@@ -114,12 +95,12 @@ public class Evento {
         this.hora = hora;
     }
 
-    public Timestamp getHoraCon() {
-        return horaCon;
+    public Timestamp getHoraConcentracion() {
+        return horaConcentracion;
     }
 
-    public void setHoraCon(Timestamp horaCon) {
-        this.horaCon = horaCon;
+    public void setHoraConcentracion(Timestamp horaConcentracion) {
+        this.horaConcentracion = horaConcentracion;
     }
 
     public Integer getMultimedia_id() {
@@ -128,5 +109,13 @@ public class Evento {
 
     public void setMultimedia_id(Integer multimedia_id) {
         this.multimedia_id = multimedia_id;
+    }
+
+    public Integer getTipoEvento_id() {
+        return tipoEvento_id;
+    }
+
+    public void setTipoEvento_id(Integer tipoEvento_id) {
+        this.tipoEvento_id = tipoEvento_id;
     }
 }

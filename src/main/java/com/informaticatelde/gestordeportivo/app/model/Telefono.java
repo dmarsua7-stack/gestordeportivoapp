@@ -6,12 +6,15 @@ public class Telefono {
     private String nombre; // Referente al tipo de telefono como: tlfn propio, madre o padre.
     private String telefono;
     private Integer jugador_id;
+    private Integer entrenador_id;
 
 
-    public Telefono(String nombre, String telefono, Integer jugador_id) {
+    public Telefono(String nombre, String telefono,
+                    Integer jugador_id, Integer entrenador_id) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.jugador_id = jugador_id;
+        this.entrenador_id = entrenador_id;
 
     }
 
@@ -42,4 +45,13 @@ public class Telefono {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public Integer getEntrenador_id() {
+        return entrenador_id;
+    }
+
+    public void setEntrenador_id(Integer entrenador_id) {
+        this.entrenador_id = entrenador_id;
+    }
 }
+

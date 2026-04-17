@@ -8,31 +8,35 @@ public class Ejercicio {
     private String nombre;
     private String posicion;
     private String descripcion;
-    private String multimedia;
     private Time duracion;
-    private String categoria;
-    private String subcategoria;
     private Integer dificultad;
-    private String habilidad; // Esto puede ser una clase externa para varias habilidades
-    private String nombreMaterial;
-    private Integer cantMaterial;
     private Integer numJugMin;
+    private Integer cantidad; // Referente al material necesario
+    //Falta añadir el TipoEjercicio y SubtipoEjercicio que se quiera.
+    private String nombreMaterial; // Como podemos unirlo a la base de datos??
+    private Integer categoria_id;
+    private Integer habilidad_id;
+    private Integer multimedia_id;
 
-    public void Ejercicio (String nombre, String posicion, String descripcion, String multimedia, Time duracion, String categoria,
-                            String subcategoria, Integer dificultad, String habilidad, String nombreMaterial, Integer cantMaterial, Integer numJugMin) {
+
+
+    public void Ejercicio (String nombre, String posicion, String descripcion, Time duracion, Integer dificultad,
+                           Integer numJugMin, Integer cantidad,
+                           String nombreMaterial,  Integer categoria_id, Integer habilidad_id, Integer multimedia_id) {
 
         this.nombre = nombre;
         this.posicion = posicion;
         this.descripcion = descripcion;
-        this.multimedia = multimedia;
         this.duracion = duracion;
-        this.categoria = categoria;
-        this.subcategoria = subcategoria;
         this.dificultad = dificultad;
-        this.habilidad = habilidad;
-        this.nombreMaterial = nombreMaterial;
-        this.cantMaterial = cantMaterial;
         this.numJugMin = numJugMin;
+        this.cantidad = cantidad;
+        this.nombreMaterial = nombreMaterial;
+        this.categoria_id = categoria_id;
+        this.habilidad_id = habilidad_id;
+        this.multimedia_id = multimedia_id;
+
+
 
     }
 
@@ -64,36 +68,12 @@ public class Ejercicio {
         this.descripcion = descripcion;
     }
 
-    public String getMultimedia() {
-        return multimedia;
-    }
-
-    public void setMultimedia(String multimedia) {
-        this.multimedia = multimedia;
-    }
-
     public Time getDuracion() {
         return duracion;
     }
 
     public void setDuracion(Time duracion) {
         this.duracion = duracion;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getSubcategoria() {
-        return subcategoria;
-    }
-
-    public void setSubcategoria(String subcategoria) {
-        this.subcategoria = subcategoria;
     }
 
     public Integer getDificultad() {
@@ -104,12 +84,20 @@ public class Ejercicio {
         this.dificultad = dificultad;
     }
 
-    public String getHabilidad() {
-        return habilidad;
+    public Integer getNumJugMin() {
+        return numJugMin;
     }
 
-    public void setHabilidad(String habilidad) {
-        this.habilidad = habilidad;
+    public void setNumJugMin(Integer numJugMin) {
+        this.numJugMin = numJugMin;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
 
     public String getNombreMaterial() {
@@ -120,21 +108,27 @@ public class Ejercicio {
         this.nombreMaterial = nombreMaterial;
     }
 
-    public Integer getCantMaterial() {
-        return cantMaterial;
+    public Integer getCategoria_id() {
+        return categoria_id;
     }
 
-    public void setCantMaterial(Integer cantMaterial) {
-        this.cantMaterial = cantMaterial;
+    public void setCategoria_id(Integer categoria_id) {
+        this.categoria_id = categoria_id;
     }
 
-    public Integer getNumJugMin() {
-        return numJugMin;
+    public Integer getHabilidad_id() {
+        return habilidad_id;
     }
 
-    public void setNumJugMin(Integer numJugMin) {
-        this.numJugMin = numJugMin;
+    public void setHabilidad_id(Integer habilidad_id) {
+        this.habilidad_id = habilidad_id;
     }
 
+    public Integer getMultimedia_id() {
+        return multimedia_id;
+    }
 
+    public void setMultimedia_id(Integer multimedia_id) {
+        this.multimedia_id = multimedia_id;
+    }
 }

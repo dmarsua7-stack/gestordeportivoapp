@@ -7,17 +7,19 @@ public class Categoria {
     private String descripcion;
     private Integer equipo_id;
     private Integer jugador_id;
+    private Integer entrenador_id;
     private Integer entrenamiento_id;
     private Integer ejercicio_id;
     private Integer subcategoria_id;
 
     public Categoria (String nombre, String descripcion, Integer equipo_id,
-                    Integer jugador_id,Integer entrenamiento_id,Integer ejercicio_id, Integer subcategoria_id){
+                    Integer jugador_id, Integer entrenador_id, Integer entrenamiento_id,Integer ejercicio_id, Integer subcategoria_id){
 
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.equipo_id = equipo_id;
         this.jugador_id = jugador_id;
+        this.entrenador_id = entrenador_id;
         this.entrenamiento_id = entrenamiento_id;
         this.ejercicio_id = ejercicio_id;
         this.subcategoria_id = subcategoria_id;
@@ -58,6 +60,14 @@ public class Categoria {
 
     public void setJugador_id(Integer jugador_id) {
         this.jugador_id = jugador_id;
+    }
+
+    public Integer getEntrenador_id() {
+        return entrenador_id;
+    }
+
+    public void setEntrenador_id(Integer entrenador_id) {
+        this.entrenador_id = entrenador_id;
     }
 
     public Integer getEntrenamiento_id() {

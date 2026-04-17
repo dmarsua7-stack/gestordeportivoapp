@@ -4,17 +4,20 @@ public class Equipo {
 
     private Integer idEquipo;
     private String nombre;
-    private String categoria;
-    private String subcategoria;
+    private Integer categoria_id;
+    private Integer subcategoria_id;
     private Integer jugador_id; // Esto no iría con la lista de jugdores?
+    private Integer entrenador_id; // Entiendo que también se necesita una lista de entrenadores
     private Integer multimedia_id; // Con esto se pretende añadir una foto de equipo
 
-    public Equipo (String nombre, String categoria, String subcategoria, Integer jugador_id, Integer multimedia_id){
+    public Equipo (String nombre, Integer categoria_id, Integer subcategoria_id,
+                   Integer jugador_id, Integer entrenador_id, Integer multimedia_id){
 
         this.nombre = nombre;
-        this.categoria = categoria;
-        this.subcategoria = subcategoria;
+        this.categoria_id = categoria_id;
+        this.subcategoria_id = subcategoria_id;
         this.jugador_id = jugador_id;
+        this.entrenador_id = entrenador_id;
         this.multimedia_id = multimedia_id;
 
     }
@@ -31,20 +34,20 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public Integer getCategoria_id() {
+        return categoria_id;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategoria_id(Integer categoria_id) {
+        this.categoria_id = categoria_id;
     }
 
-    public String getSubcategoria() {
-        return subcategoria;
+    public Integer getSubcategoria_Id() {
+        return subcategoria_id;
     }
 
-    public void setSubcategoria(String subcategoria) {
-        this.subcategoria = subcategoria;
+    public void setSubcategoria_id(Integer subcategoria_id) {
+        this.subcategoria_id = subcategoria_id;
     }
 
     public Integer getJugador_id() {
@@ -53,6 +56,14 @@ public class Equipo {
 
     public void setJugador_id(Integer jugador_id) {
         this.jugador_id = jugador_id;
+    }
+
+    public Integer getEntrenador_id() {
+        return entrenador_id;
+    }
+
+    public void setEntrenador_id(Integer entrenador_id) {
+        this.entrenador_id = entrenador_id;
     }
 
     public Integer getMultimedia_id() {
