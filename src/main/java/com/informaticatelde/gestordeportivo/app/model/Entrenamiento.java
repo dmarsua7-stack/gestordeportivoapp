@@ -12,18 +12,17 @@ public class Entrenamiento {
     private Time duracion;
     private String instalacion;
     private String tipo;
-    private String listaEjercicios;
+    private String listaEjercicios; // Esto será una lista de ejercicios
     private Integer jugParticipantes;
-    private String multimedia;
     private Date fecha;
     private Timestamp horaInicio;
     private Timestamp horaConcentracion;
-
+    private String listaMultimedia; // Esto puede incluir varios archivos, puede ser otra lista
 
 
 
     public void Entrenamiento (String nombre, Time duracion, String instalacion, String tipo, String listaEjercicios,
-                               Integer jugParticipantes, String multimedia, Date fecha, Timestamp horaInicio, Timestamp horaConcentracion ) {
+                               Integer jugParticipantes, Date fecha, Timestamp horaInicio, Timestamp horaConcentracion, String listaMultimedia) {
 
         this.nombre = nombre;
         this.duracion = duracion;
@@ -31,11 +30,10 @@ public class Entrenamiento {
         this.tipo = tipo;
         this.listaEjercicios = listaEjercicios;
         this.jugParticipantes = jugParticipantes;
-        this.multimedia = multimedia;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaConcentracion = horaConcentracion;
-
+        this.listaMultimedia = listaMultimedia;
 
     }
 
@@ -55,12 +53,12 @@ public class Entrenamiento {
     }
 
 
-    public Timestamp getDuracion() {
+    public Time getDuracion() {
         return duracion;
     }
 
 
-    public void setDuracion(Timestamp duracion) {
+    public void setDuracion(Time duracion) {
         this.duracion = duracion;
     }
 
@@ -105,13 +103,13 @@ public class Entrenamiento {
     }
 
 
-    public String getMultimedia() {
-        return multimedia;
+    public String getlistaMultimedia() {
+        return listaMultimedia;
     }
 
 
     public void setMultimedia(String multimedia) {
-        this.multimedia = multimedia;
+        this.listaMultimedia = listaMultimedia;
     }
 
 

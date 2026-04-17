@@ -4,39 +4,39 @@ import java.sql.Date;
 
 public class Jugador {
 
-    private Integer idJugador;
+    private Integer idJug;
     private String dniJug;
     private String nombre;
     private String apellido01;
     private String apellido02;
-    private String foto;
     private Date fechaNac;
-    private String equipo;
-    private String categoria;
-    private String subcategoria;
+    private String categoria; // Esto debería ser otra lista/clase
+    private String subcategoria; // Como anidamos categorias dependientes??
     private Integer dorsal;
     private String observaciones;
     private Date fechaReg;
-
+    private String equipo_nombre; // Se debe unir por id?? Pq?
+    private Integer multimedia_id; // Foto del jugador
 
     public Jugador (String dniJug, String nombre, String apellido01, String apellido02,
-                         String foto, Date fechaNac, String equipo, String categoria, String subcategoria, Integer dorsal, String observaciones, Date fechaReg) {
+                         String foto, Date fechaNac, String categoria, String subcategoria, Integer dorsal,
+                    String observaciones, Date fechaReg, String equipo_nombre, Integer multimedia_id ) {
         this.dorsal = dorsal;
         this.dniJug = dniJug;
         this.nombre = nombre;
         this.apellido01 = apellido01;
         this.apellido02 = apellido02;
-        this.foto = foto;
         this.fechaNac= fechaNac;
-        this.equipo = equipo;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
         this.observaciones = observaciones;
         this.fechaReg = fechaReg;
+        this.equipo_nombre = equipo_nombre;
+        this.multimedia_id = multimedia_id;
     }
 
-    public Integer getIdJugador() {
-        return idJugador;
+    public Integer getIdJug() {
+        return idJug;
     }
 
     public String getDniJug() {
@@ -71,28 +71,12 @@ public class Jugador {
         this.apellido02 = apellido02;
     }
 
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
     public Date getFechaNac() {
         return fechaNac;
     }
 
     public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
-    }
-
-    public String getEquipo() {
-        return equipo;
-    }
-
-    public void setEquipo(String equipo) {
-        this.equipo = equipo;
     }
 
     public String getCategoria() {
@@ -133,5 +117,21 @@ public class Jugador {
 
     public void setFechaReg(Date fechaReg) {
         this.fechaReg = fechaReg;
+    }
+
+    public String getEquipo_nombre() {
+        return equipo_nombre;
+    }
+
+    public void setEquipo_nombre(String equipo_nombre) {
+        this.equipo_nombre = equipo_nombre;
+    }
+
+    public Integer getMultimedia_id() {
+        return multimedia_id;
+    }
+
+    public void setMultimedia_id(Integer multimedia_id) {
+        this.multimedia_id = multimedia_id;
     }
 }

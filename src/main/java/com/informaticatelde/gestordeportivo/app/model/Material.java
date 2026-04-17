@@ -8,16 +8,15 @@ public class Material {
     private String descripcion;
     private Integer cantidad;
     private String categoria;
-    private String imagen;
+    private Integer multimedia_id;  // En MySql se describe como tipo MediumBlob
 
 
-    public Material (String nombre,String descripcion, Integer cantidad, String categoria, String imagen) {
-        this.idMaterial = 1; // Cuando se tenga una bd se debe borrar este id
+    public Material (String nombre,String descripcion, Integer cantidad, String categoria, Integer multimedia_id) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.categoria = categoria;
-        this.imagen = imagen;
+        this.multimedia_id = multimedia_id;
 
     }
 
@@ -57,13 +56,11 @@ public class Material {
         this.categoria = categoria;
     }
 
-    public String getImagen() {
-        return imagen;
+    public Integer getMultimedia_id() {
+        return multimedia_id;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setMultimedia_id(Integer multimedia_id) {
+        this.multimedia_id = multimedia_id;
     }
-
-
 }

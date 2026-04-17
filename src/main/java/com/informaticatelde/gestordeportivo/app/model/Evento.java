@@ -1,7 +1,6 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 import java.sql.Date;
-import java.util.Date;
 import java.sql.Timestamp;
 
 public class Evento {
@@ -15,15 +14,14 @@ public class Evento {
     private String gmaps;
     private String tipo;
     private String categoria;
-    private String imagen;
     private Date fecha;
     private Timestamp hora;
-    private Timestamp horaConcentracion;
-
+    private Timestamp horaCon;
+    private Integer multimedia_id;
 
 
     public void Evento (String nombre, String ubicacion, String direccion, String localidad, String gmaps,
-                        String tipo, String categoria, String imagen, Date fecha, Timestamp hora, Timestamp horaConcentracion) {
+                        String tipo, String categoria, Date fecha, Timestamp hora, Timestamp horaCon, Integer multimedia_id) {
 
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -32,10 +30,10 @@ public class Evento {
         this.gmaps = gmaps;
         this.tipo = tipo; // "Online / Físico ";
         this.categoria =  categoria; // "Entrenamiento/Competición/Reunión/Fiesta";
-        this.imagen = imagen;
         this.fecha = fecha;
         this.hora = hora;
-        this.horaConcentracion = horaConcentracion;
+        this.horaCon = horaCon;
+        this.multimedia_id = multimedia_id;
 
     }
 
@@ -100,14 +98,6 @@ public class Evento {
         this.categoria = categoria;
     }
 
-    public String getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
-
     public Date getFecha() {
         return fecha;
     }
@@ -124,15 +114,19 @@ public class Evento {
         this.hora = hora;
     }
 
-    public Timestamp getHoraConcentracion() {
-        return horaConcentracion;
+    public Timestamp getHoraCon() {
+        return horaCon;
     }
 
-    public void setHoraConcentracion(Timestamp horaConcentracion) {
-        this.horaConcentracion = horaConcentracion;
+    public void setHoraCon(Timestamp horaCon) {
+        this.horaCon = horaCon;
     }
 
+    public Integer getMultimedia_id() {
+        return multimedia_id;
+    }
 
-
-
+    public void setMultimedia_id(Integer multimedia_id) {
+        this.multimedia_id = multimedia_id;
+    }
 }

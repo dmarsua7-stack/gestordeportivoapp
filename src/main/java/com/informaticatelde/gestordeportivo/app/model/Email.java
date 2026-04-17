@@ -2,25 +2,21 @@ package com.informaticatelde.gestordeportivo.app.model;
 
 public class Email {
 
-    private String dniJug;
+    private String idJugador;
     private String email01;
     private String email02;
     private String email03;
 
-    public Email (String dniJug, String email01, String email02, String email03){
-        this.dniJug = dniJug;
+    public Email (String idJugador, String email01, String email02, String email03){
+        this.idJugador = idJugador;
         this.email01 = email01;
         this.email02 = email02;
         this.email03 = email03;
     }
 
 
-    public String getDniJug() {
-        return dniJug;
-    }
-
-    public void setDniJug(String dniJug) {
-        this.dniJug = dniJug;
+    public String getidJugador() {
+        return idJugador;
     }
 
     public String getEmail01() {

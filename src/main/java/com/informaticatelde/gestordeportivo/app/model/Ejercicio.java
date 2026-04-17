@@ -13,7 +13,7 @@ public class Ejercicio {
     private String categoria;
     private String subcategoria;
     private Integer dificultad;
-    private String habilidad;
+    private String habilidad; // Esto puede ser una clase externa para varias habilidades
     private String nombreMaterial;
     private Integer cantMaterial;
     private Integer numJugMin;
@@ -28,17 +28,17 @@ public class Ejercicio {
         this.duracion = duracion;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
+        this.dificultad = dificultad;
         this.habilidad = habilidad;
         this.nombreMaterial = nombreMaterial;
         this.cantMaterial = cantMaterial;
-        this.numJugMin = 1;
+        this.numJugMin = numJugMin;
 
     }
 
     public Integer getIdEjercicio() {
         return idEjercicio;
     }
-
 
     public String getNombre() {
         return nombre;

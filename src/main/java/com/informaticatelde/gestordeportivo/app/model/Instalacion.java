@@ -7,15 +7,15 @@ public class Instalacion {
     private String direccion;
     private String localidad;
     private String gmaps;
-    private String imagen;
+    private Integer multimedia_id;
 
 
-    public void Instalacion (String nombre, String direccion, String localidad, String gmaps, String imagen) {
+    public void Instalacion (String nombre, String direccion, String localidad, String gmaps, Integer multimedia_id) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.localidad = localidad;
         this.gmaps = gmaps;
-        this. imagen = imagen;
+        this.multimedia_id = multimedia_id;
 
     }
 
@@ -56,11 +56,11 @@ public class Instalacion {
         this.gmaps = gmaps;
     }
 
-    public String getImagen() {
-        return imagen;
+    public Integer getMultimedia_id() {
+        return multimedia_id;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setMultimedia_id(Integer multimedia_id) {
+        this.multimedia_id = multimedia_id;
     }
 }

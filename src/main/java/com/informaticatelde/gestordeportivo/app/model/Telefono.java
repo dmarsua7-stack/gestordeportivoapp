@@ -2,51 +2,44 @@ package com.informaticatelde.gestordeportivo.app.model;
 
 public class Telefono {
 
-    private String dniJug;
-    private String telefono01;
-    private String telefono02;
-    private String telefono03;
+    private Integer idTlfn;
+    private String nombre; // Referente al tipo de telefono como: tlfn propio, madre o padre.
+    private String telefono;
+    private Integer jugador_id;
 
 
-    public Telefono (String dniJug, String telefono01, String telefono02, String telefono03){
-        this.dniJug = dniJug;
-        this.telefono01 = telefono01;
-        this.telefono02 = telefono02;
-        this.telefono03 = telefono03;
+    public Telefono(String nombre, String telefono, Integer jugador_id) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.jugador_id = jugador_id;
 
     }
 
-
-    public String getDniJug() {
-        return dniJug;
+    public Integer getIdTlfn() {
+        return idTlfn;
     }
 
-    public void setDniJug(String dniJug) {
-        this.dniJug = dniJug;
+    public Integer getJugador_id() {
+        return jugador_id;
     }
 
-    public String getTelefono01() {
-        return telefono01;
+    public void setJugador_id(Integer jugador_id) {
+        this.jugador_id = jugador_id;
     }
 
-    public void setTelefono01(String telefono01) {
-        this.telefono01 = telefono01;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getTelefono02() {
-        return telefono02;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setTelefono02(String telefono02) {
-        this.telefono02 = telefono02;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public String getTelefono03() {
-        return telefono03;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
-
-    public void setTelefono03(String telefono03) {
-        this.telefono03 = telefono03;
-    }
-
 }
