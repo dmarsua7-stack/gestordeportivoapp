@@ -5,6 +5,13 @@ import java.util.TreeSet;
 
 public class Equipo {
 
+    /// TODO: Cambiar los Set por List. más simple y evitamos complejidad en los métodos.
+    /// TODO: Cambiar Categoria por CategoriaEquipo y asi diferenciarlo de CategoriaHabilidad.
+    /// TODO: Añadir listado de entrenamientos.
+
+
+
+
     private Integer idEquipo;
     private String nombre;
     private Categoria categoria;

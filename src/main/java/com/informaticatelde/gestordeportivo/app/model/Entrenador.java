@@ -4,6 +4,11 @@ import java.sql.Date;
 
 public class Entrenador {
 
+    /// TODO: Añadir listado para los equipos
+    /// TODO: Añadir password. Son los usuarios del sistema.
+    /// TODO: Expicame especialidad y nivel
+    /// Modificar multimedia_id para que sea un objeto Multimedia multimedia;
+    /// Modificar constructores para poner como parametros aquellos que sean estrictamente necesarios para crear un entrenador. Ejemplo: el equipo no es necesario.
     private Integer idEntrenador;
     private String dniEntrenador;
     private String nombre;

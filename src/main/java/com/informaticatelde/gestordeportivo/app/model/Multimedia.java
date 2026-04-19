@@ -3,7 +3,7 @@ package com.informaticatelde.gestordeportivo.app.model;
 import java.sql.Date;
 
 public class Multimedia {
-
+    /// TODO: faltaria añadir String url para la url de la imagen.
     private Integer idMultimedia;
     private String nombre;
     private String descripcion;

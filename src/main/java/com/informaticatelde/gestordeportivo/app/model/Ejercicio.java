@@ -3,6 +3,12 @@ package com.informaticatelde.gestordeportivo.app.model;
 import java.sql.Time;
 
 public class Ejercicio {
+    /// TODO: Elimina cantidad esto estará en EjercicioMaterial.
+    /// TODO: Elimina nombreMaterial esto estará en EjercicioMaterial.
+    /// TODO: un ejercicio puede tener varias imagenes. Sustituye Integer multimedia_id por List<Multimedia> imagenes
+    /// TODO: Sustituye Integer categoria_id por CategoriaEjercicio categoriaEjercicio.
+    /// TODO: Sustituye Integer habilidad_id por List<Habilidad> habilidades.
+
 
     private Integer idEjercicio;
     private String nombre;

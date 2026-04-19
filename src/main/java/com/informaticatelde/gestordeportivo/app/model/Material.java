@@ -1,7 +1,9 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 public class Material {
-
+    ///  TODO: Vamos a simplificarlo. Vamos a tener nombre, descripcion y multimedia
+    ///  TODO: eliminar cantidad y categoria.
+    ///  TODO: Sustituir Integer multimedia_id por Multimedia multimedia.
 
     private Integer idMaterial;
     private String nombre;

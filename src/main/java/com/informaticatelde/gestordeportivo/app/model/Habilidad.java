@@ -1,7 +1,10 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 public class Habilidad {
-
+    /// TODO: Se simplifica con la creacion de los otros objetos JugadorHabilidad
+    /// TODO: Sustituir String categoria por CategoriaEjercicio categoria.
+    /// TODO: Añadir Multimedia imagen. Puede ser util.
+    /// TODO: Eliminar jugador_id, subcategoria y ejercicio_id.Ya esta información se obtiene de las clases importantes.
 
     private Integer idHabilidad;
     private String nombre; // Designación de la habilidad

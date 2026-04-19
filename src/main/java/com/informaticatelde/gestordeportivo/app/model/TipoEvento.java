@@ -2,6 +2,8 @@ package com.informaticatelde.gestordeportivo.app.model;
 
 public class TipoEvento {
 
+    /// TODO: Elimina evento_id. No es necesario. Esa info se obtiene del evento.
+
     private Integer idTipoEvento;
     private String nombre;
     private String descripcion;

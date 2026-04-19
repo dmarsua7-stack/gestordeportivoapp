@@ -3,7 +3,12 @@ package com.informaticatelde.gestordeportivo.app.model;
 import java.sql.Date;
 
 public class Jugador {
-
+    /// TODO: Faltaria dirección.
+    /// TODO: Sustituir Integer multimedia_id por Multimedia multimedia. Getter, setters y parametros.
+    /// TODO: Sustituir Integer equipo_id por Equipo equipo. Getter, setters y parametros. Importante para crear un jugador, el equipo si debe existir.
+    /// TODO: Eliminar categoria_id y subcategoria_id. Esto es info del equipo, no lo necesitamos en el jugador.
+    /// TODO: Añadir lista de JugadorHabilidad habilidades.
+    /// TODO: Añadir List<JugadorContacto> contactos.
     private Integer idJugador;
     private String dniJugador;
     private String nombre;

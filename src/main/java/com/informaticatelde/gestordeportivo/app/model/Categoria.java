@@ -1,7 +1,8 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 public class Categoria {
-
+    /// TODO: Refactorizar la clase y llamarla CategoriEquipo
+    /// TODO: Eliminar la propiedad Equipo. No la necesitamos en esta clase. Solo dejamos idCategoriaEquipo, nombre y descripcion.
     private Integer idCategoria;
     private String nombre;
     private String descripcion;

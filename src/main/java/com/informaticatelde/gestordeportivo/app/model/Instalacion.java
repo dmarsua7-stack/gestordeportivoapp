@@ -2,6 +2,8 @@ package com.informaticatelde.gestordeportivo.app.model;
 
 public class Instalacion {
 
+    /// TODO: Sustituye Integer multimedia_id por Multimedia multimedia.
+    ///
     private Integer idInstalacion;
     private String nombre;
     private String direccion;

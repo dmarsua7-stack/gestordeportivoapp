@@ -1,7 +1,8 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 public class Telefono {
-
+    /// TODO: Elimina jugador_id y entrenador_id. Añade una nueva propiedad Contacto contacto sus getter y setters. Ajusta el constructor.
+    ///
     private Integer idTlfn;
     private String nombre; // Referente al tipo de telefono como: tlfn propio, madre o padre.
     private String telefono;
