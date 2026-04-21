@@ -1,6 +1,7 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 import java.sql.Time;
+import java.util.List;
 
 public class Ejercicio {
     /// TODO: Elimina cantidad esto estará en EjercicioMaterial.
@@ -17,18 +18,14 @@ public class Ejercicio {
     private Time duracion;
     private Integer dificultad;
     private Integer numJugMin;
-    private Integer cantidad; // Referente al material necesario
-    //Falta añadir el TipoEjercicio y SubtipoEjercicio que se quiera.
-    private String nombreMaterial; // Como podemos unirlo a la base de datos??
-    private Integer categoria_id;
-    private Integer habilidad_id;
-    private Integer multimedia_id;
+    private CategoriaEjercicio categoriaEjercicio;
+    private List<Habilidad> habilidades;
+    private List<Multimedia> imagenes;
 
 
 
     public void Ejercicio (String nombre, String posicion, String descripcion, Time duracion, Integer dificultad,
-                           Integer numJugMin, Integer cantidad,
-                           String nombreMaterial,  Integer categoria_id, Integer habilidad_id, Integer multimedia_id) {
+                           Integer numJugMin, CategoriaEjercicio categoriaEjercicio, List<Habilidad> habilidades, List<Multimedia> imagenes) {
 
         this.nombre = nombre;
         this.posicion = posicion;
@@ -36,11 +33,9 @@ public class Ejercicio {
         this.duracion = duracion;
         this.dificultad = dificultad;
         this.numJugMin = numJugMin;
-        this.cantidad = cantidad;
-        this.nombreMaterial = nombreMaterial;
-        this.categoria_id = categoria_id;
-        this.habilidad_id = habilidad_id;
-        this.multimedia_id = multimedia_id;
+        this.categoriaEjercicio = categoriaEjercicio;
+        this.habilidades = habilidades;
+        this.imagenes = imagenes;
 
 
 
@@ -98,43 +93,27 @@ public class Ejercicio {
         this.numJugMin = numJugMin;
     }
 
-    public Integer getCantidad() {
-        return cantidad;
+    public CategoriaEjercicio getCategoriaEjercicio() {
+        return categoriaEjercicio;
     }
 
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
+    public void setCategoriaEjercicio(CategoriaEjercicio categoriaEjercicio) {
+        this.categoriaEjercicio = categoriaEjercicio;
     }
 
-    public String getNombreMaterial() {
-        return nombreMaterial;
+    public List<Habilidad> getHabilidades() {
+        return habilidades;
     }
 
-    public void setNombreMaterial(String nombreMaterial) {
-        this.nombreMaterial = nombreMaterial;
+    public void setHabilidades(List<Habilidad> habilidades) {
+        this.habilidades = habilidades;
     }
 
-    public Integer getCategoria_id() {
-        return categoria_id;
+    public List<Multimedia> getImagenes() {
+        return imagenes;
     }
 
-    public void setCategoria_id(Integer categoria_id) {
-        this.categoria_id = categoria_id;
-    }
-
-    public Integer getHabilidad_id() {
-        return habilidad_id;
-    }
-
-    public void setHabilidad_id(Integer habilidad_id) {
-        this.habilidad_id = habilidad_id;
-    }
-
-    public Integer getMultimedia_id() {
-        return multimedia_id;
-    }
-
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setImagenes(List<Multimedia> imagenes) {
+        this.imagenes = imagenes;
     }
 }

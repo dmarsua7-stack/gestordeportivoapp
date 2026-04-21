@@ -5,4 +5,35 @@ public class JugadorContacto {
     // Esto permite controlar los casos de contactos repetidos entre jugadores y marcar incluso contactos como principales
 
     ///  TODO: añadir Integer id, Jugador jugador, Contacto contacto.
+
+    private Integer idJugadorContacto;
+    private Jugador jugador;
+    private Contacto contacto;
+
+
+    public JugadorContacto (Jugador jugador, Contacto contacto){
+        this.jugador = jugador;
+        this.contacto = contacto;
+
+    }
+
+    public Integer getIdJugadorContacto() {
+        return idJugadorContacto;
+    }
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    public Contacto getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(Contacto contacto) {
+        this.contacto = contacto;
+    }
 }

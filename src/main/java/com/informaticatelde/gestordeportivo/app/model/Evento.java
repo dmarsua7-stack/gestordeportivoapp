@@ -1,7 +1,7 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Evento {
     /// Vamos a simplificar esta parte. Como ya tenemos una clase Instalación que tiene gran parte de esos cambios vamos a usarla.
@@ -13,30 +13,26 @@ public class Evento {
 
     private Integer idEvento;
     private String nombre;
-    private String ubicacion;
-    private String direccion;
-    private String localidad;
-    private String gmaps;
-    private Date fecha;
-    private Timestamp hora;
-    private Timestamp horaConcentracion;
-    private Integer multimedia_id;
-    private Integer tipoEvento_id;
+    private Instalacion instalacion;
+    private LocalDate fecha;
+    private LocalTime hora;
+    private LocalTime horaConcentracion;
+    private Equipo equipo;
+    private Multimedia multimedia;
+    private TipoEvento tipoEvento;
 
 
-    public void Evento (String nombre, String ubicacion, String direccion, String localidad, String gmaps,
-             Date fecha, Timestamp hora, Timestamp horaConcentracion, Integer multimedia_id, Integer tipoEvento_id) {
+    public void Evento (String nombre, Instalacion instalacion, LocalDate fecha,
+                        LocalTime hora, LocalTime horaConcentracion, Equipo equipo, Multimedia multimedia, TipoEvento tipoEvento) {
 
         this.nombre = nombre;
-        this.ubicacion = ubicacion;
-        this.direccion = direccion;
-        this.localidad = localidad;
-        this.gmaps = gmaps;
+        this.instalacion = instalacion;
         this.fecha = fecha;
         this.hora = hora;
         this.horaConcentracion = horaConcentracion;
-        this.multimedia_id = multimedia_id;
-        this.tipoEvento_id = tipoEvento_id; // "Online / Físico " y tambien "Entrenamiento/Competición/Reunión/Fiesta";
+        this.equipo = equipo;
+        this.multimedia = multimedia;
+        this.tipoEvento = tipoEvento; // "Online / Físico " y tambien "Entrenamiento/Competición/Reunión/Fiesta";
 
     }
 
@@ -52,75 +48,59 @@ public class Evento {
         this.nombre = nombre;
     }
 
-    public String getUbicacion() {
-        return ubicacion;
+    public Instalacion getInstalacion() {
+        return instalacion;
     }
 
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
+    public void setInstalacion(Instalacion instalacion) {
+        this.instalacion = instalacion;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getLocalidad() {
-        return localidad;
-    }
-
-    public void setLocalidad(String localidad) {
-        this.localidad = localidad;
-    }
-
-    public String getGmaps() {
-        return gmaps;
-    }
-
-    public void setGmaps(String gmaps) {
-        this.gmaps = gmaps;
-    }
-
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
-    public Timestamp getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(Timestamp hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 
-    public Timestamp getHoraConcentracion() {
+    public LocalTime getHoraConcentracion() {
         return horaConcentracion;
     }
 
-    public void setHoraConcentracion(Timestamp horaConcentracion) {
+    public void setHoraConcentracion(LocalTime horaConcentracion) {
         this.horaConcentracion = horaConcentracion;
     }
 
-    public Integer getMultimedia_id() {
-        return multimedia_id;
+    public Equipo getEquipo() {
+        return equipo;
     }
 
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 
-    public Integer getTipoEvento_id() {
-        return tipoEvento_id;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setTipoEvento_id(Integer tipoEvento_id) {
-        this.tipoEvento_id = tipoEvento_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
+    }
+
+    public TipoEvento getTipoEvento() {
+        return tipoEvento;
+    }
+
+    public void setTipoEvento(TipoEvento tipoEvento) {
+        this.tipoEvento = tipoEvento;
     }
 }

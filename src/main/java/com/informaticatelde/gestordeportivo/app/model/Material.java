@@ -8,17 +8,13 @@ public class Material {
     private Integer idMaterial;
     private String nombre;
     private String descripcion;
-    private Integer cantidad;
-    private String categoria;
-    private Integer multimedia_id;  // En MySql se describe como tipo MediumBlob
+    private Multimedia multimedia;  // En MySql se describe como tipo MediumBlob
 
 
-    public Material (String nombre,String descripcion, Integer cantidad, String categoria, Integer multimedia_id) {
+    public Material (String nombre,String descripcion, Multimedia multimedia) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.categoria = categoria;
-        this.multimedia_id = multimedia_id;
+        this.multimedia = multimedia;
 
     }
 
@@ -42,27 +38,11 @@ public class Material {
         this.descripcion = descripcion;
     }
 
-    public Integer getCantidad() {
-        return cantidad;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public Integer getMultimedia_id() {
-        return multimedia_id;
-    }
-
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
     }
 }

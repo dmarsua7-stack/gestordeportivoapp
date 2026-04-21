@@ -9,41 +9,19 @@ public class Habilidad {
     private Integer idHabilidad;
     private String nombre; // Designación de la habilidad
     private String descripcion; // Descripción detallada de la habilidad
-    private String categoria; // Esto se puede confundir con la categoria del equipo
-    private String subcategoria; // Se puede sustituir por tipo y subtipo??
-    private Integer jugador_id;
-    private Integer ejercicio_id;
+    private CategoriaEjercicio categoria;
+    private Multimedia imagen;
 
-    public Habilidad (String nombre, String descripcion, String categoria, String subcategoria,
-                        Integer jugador_id, Integer ejercicio_id) {
+    public Habilidad (String nombre, String descripcion, CategoriaEjercicio categoria, Multimedia imagen) {
 
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
-        this.subcategoria = subcategoria;
-        this.jugador_id = jugador_id;
-        this.ejercicio_id = ejercicio_id;
-
+        this.imagen = imagen;
     }
 
     public Integer getIdHabilidad() {
         return idHabilidad;
-    }
-
-    public Integer getJugador_id() {
-        return jugador_id;
-    }
-
-    public void setJugador_id(Integer jugador_id) {
-        this.jugador_id = jugador_id;
-    }
-
-    public Integer getEjercicio_id() {
-        return ejercicio_id;
-    }
-
-    public void setEjercicio_id(Integer ejercicio_id) {
-        this.ejercicio_id = ejercicio_id;
     }
 
     public String getNombre() {
@@ -62,19 +40,19 @@ public class Habilidad {
         this.descripcion = descripcion;
     }
 
-    public String getCategoria() {
+    public CategoriaEjercicio getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(CategoriaEjercicio categoria) {
         this.categoria = categoria;
     }
 
-    public String getSubcategoria() {
-        return subcategoria;
+    public Multimedia getImagen() {
+        return imagen;
     }
 
-    public void setSubcategoria(String subcategoria) {
-        this.subcategoria = subcategoria;
+    public void setImagen(Multimedia imagen) {
+        this.imagen = imagen;
     }
 }

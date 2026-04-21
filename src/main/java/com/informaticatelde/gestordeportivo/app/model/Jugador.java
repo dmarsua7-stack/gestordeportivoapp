@@ -1,6 +1,8 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 import java.sql.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Jugador {
     /// TODO: Faltaria dirección.
@@ -14,19 +16,21 @@ public class Jugador {
     private String nombre;
     private String apellido01;
     private String apellido02;
-    private Date fechaNac;
+    private LocalDate fechaNac;
     private Integer dorsal;
+    private String direccion;
+    private List<JugadorHabilidad> habilidades;
+    private List<JugadorContacto> contactos;
     private String observaciones;
-    private Date fechaReg; // Sobra el set??
-    private Integer equipo_id; // Se debe unir por id?? Pq?
-    private Integer multimedia_id; // Foto del jugador
-    private Integer categoria_id; // Esto debería ser otra lista/clase
-    private Integer subcategoria_id;
+    private LocalDate fechaReg; //
+    private Equipo equipo; // Se debe unir por id?? Pq?
+    private Multimedia multimedia; // Foto del jugador
 
 
     public Jugador (String dniJugador, String nombre, String apellido01, String apellido02,
-                    Date fechaNac, Integer dorsal, String observaciones, Date fechaReg,
-                    Integer equipo_id, Integer multimedia_id, Integer categoria_id, Integer subcategoria_id) {
+                    LocalDate fechaNac, Integer dorsal, String direccion, List<JugadorHabilidad> habilidades ,
+                    List<JugadorContacto> contactos, String observaciones, LocalDate fechaReg, Equipo equipo,
+                    Multimedia multimedia) {
 
         this.dniJugador = dniJugador;
         this.nombre = nombre;
@@ -34,12 +38,14 @@ public class Jugador {
         this.apellido02 = apellido02;
         this.fechaNac= fechaNac;
         this.dorsal = dorsal;
+        this.direccion = direccion;
+        this.habilidades = habilidades;
+        this.contactos = contactos;
         this.observaciones = observaciones;
         this.fechaReg = fechaReg;
-        this.equipo_id = equipo_id;
-        this.multimedia_id = multimedia_id;
-        this.categoria_id = categoria_id;
-        this.subcategoria_id = subcategoria_id;
+        this.equipo = equipo;
+        this.multimedia = multimedia;
+
     }
 
     public Integer getIdJugador() {
@@ -79,11 +85,11 @@ public class Jugador {
         this.apellido02 = apellido02;
     }
 
-    public Date getFechaNac() {
+    public LocalDate getFechaNac() {
         return fechaNac;
     }
 
-    public void setFechaNac(Date fechaNac) {
+    public void setFechaNac(LocalDate fechaNac) {
         this.fechaNac = fechaNac;
     }
 
@@ -95,6 +101,30 @@ public class Jugador {
         this.dorsal = dorsal;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public List<JugadorHabilidad> getHabilidades() {
+        return habilidades;
+    }
+
+    public void setHabilidades(List<JugadorHabilidad> habilidades) {
+        this.habilidades = habilidades;
+    }
+
+    public List<JugadorContacto> getContactos() {
+        return contactos;
+    }
+
+    public void setContactos(List<JugadorContacto> contactos) {
+        this.contactos = contactos;
+    }
+
     public String getObservaciones() {
         return observaciones;
     }
@@ -103,43 +133,27 @@ public class Jugador {
         this.observaciones = observaciones;
     }
 
-    public Date getFechaReg() {
+    public LocalDate getFechaReg() {
         return fechaReg;
     }
 
-    public void setFechaReg(Date fechaReg) {
+    public void setFechaReg(LocalDate fechaReg) {
         this.fechaReg = fechaReg;
     }
 
-    public Integer getEquipo_id() {
-        return equipo_id;
+    public Equipo getEquipo() {
+        return equipo;
     }
 
-    public void setEquipo_id(Integer equipo_id) {
-        this.equipo_id = equipo_id;
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 
-    public Integer getMultimedia_id() {
-        return multimedia_id;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
-    }
-
-    public Integer getCategoria_id() {
-        return categoria_id;
-    }
-
-    public void setCategoria_id(Integer categoria_id) {
-        this.categoria_id = categoria_id;
-    }
-
-    public Integer getSubcategoria_id() {
-        return subcategoria_id;
-    }
-
-    public void setSubcategoria_id(Integer subcategoria_id) {
-        this.subcategoria_id = subcategoria_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
     }
 }

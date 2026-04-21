@@ -1,7 +1,6 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.List;
 
 public class Equipo {
 
@@ -9,32 +8,32 @@ public class Equipo {
     /// TODO: Cambiar Categoria por CategoriaEquipo y asi diferenciarlo de CategoriaHabilidad.
     /// TODO: Añadir listado de entrenamientos.
 
-
-
-
     private Integer idEquipo;
     private String nombre;
-    private Categoria categoria;
-    private Set<Jugador> jugadores;
-    private Set<Entrenador> entrenadores;
+    private CategoriaEquipo categoriaEquipo;
+    private List<Jugador> jugadores;
+    private List<Entrenador> entrenadores;
+    private List<Entrenamiento> entrenamientos;
     private Multimedia multimedia; // Con esto se pretende añadir una foto de equipo
 
-    public Equipo (String nombre, Categoria categoria,
-                   Set<Jugador> jugadores, Set<Entrenador> entrenadores, Multimedia multimedia){
+    public Equipo (String nombre, CategoriaEquipo categoriaEquipo,
+                   List<Jugador> jugadores, List<Entrenador> entrenadores, List<Entrenamiento> entrenamientos,
+                   Multimedia multimedia){
 
         this.nombre = nombre;
-        this.categoria = categoria;
+        this.categoriaEquipo = categoriaEquipo;
         this.jugadores = jugadores;
         this.entrenadores= entrenadores;
+        this.entrenamientos = entrenamientos;
         this.multimedia = multimedia;
 
     }
-    public Equipo (String nombre, Categoria categoria){
+    public Equipo (String nombre, CategoriaEquipo categoriaEquipo){
 
         this.nombre = nombre;
-        this.categoria = categoria;
-        this.jugadores = new TreeSet<Jugador>();
-        this.entrenadores= new TreeSet<Entrenador>();
+        this.categoriaEquipo = categoriaEquipo;
+        this.jugadores = jugadores;
+        this.entrenadores= entrenadores;
 
     }
 
@@ -50,28 +49,44 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public CategoriaEquipo getCategoria() {
+        return categoriaEquipo;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setCategoria(CategoriaEquipo categoriaEquipo) {
+        this.categoriaEquipo = categoriaEquipo;
     }
 
-    public Set<Jugador> getJugadores() {
+    public List<Jugador> getJugadores() {
         return jugadores;
     }
 
-    public void setJugadores(Set<Jugador> jugadores) {
+    public void setJugadores(List<Jugador> jugadores) {
         this.jugadores = jugadores;
     }
 
-    public Set<Entrenador> getEntrenadores() {
+    public List<Entrenador> getEntrenadores() {
         return entrenadores;
     }
 
-    public void setEntrenadores(Set<Entrenador> entrenadores) {
+    public void setEntrenadores(List<Entrenador> entrenadores) {
         this.entrenadores = entrenadores;
+    }
+
+    public List<Entrenamiento> getEntrenamientos() {
+        return entrenamientos;
+    }
+
+    public void setEntrenamientos(List<Entrenamiento> entrenamientos) {
+        this.entrenamientos = entrenamientos;
+    }
+
+    public CategoriaEquipo getCategoriaEquipo() {
+        return categoriaEquipo;
+    }
+
+    public void setCategoriaEquipo(CategoriaEquipo categoriaEquipo) {
+        this.categoriaEquipo = categoriaEquipo;
     }
 
     public Multimedia getMultimedia() {

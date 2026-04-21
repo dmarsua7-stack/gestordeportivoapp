@@ -1,9 +1,10 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 
-import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Entrenamiento {
 ///  TODO: Sustituye Integer multimedia_id por Multimedia multimedia
@@ -18,30 +19,32 @@ public class Entrenamiento {
     private Integer idEntrenamiento;
     private String nombre;
     private Time duracion;
-    private String tipo; // Refernciar a que llamamos tipo de entrenamiento
-    private String listaEjercicios; // Esto será una lista de ejercicios
-    private Integer jugParticipantes;
-    private Date fecha;
+    private TipoEntrenamiento tipoEntrenamiento; // Refernciar a que llamamos tipo de entrenamiento
+    private List<Ejercicio> ejercicios; // Esto será una lista de ejercicios
+    private List<Jugador> jugadores;
+    private Equipo equipo;
+    private LocalDate fecha;
     private Timestamp horaInicio;
     private Timestamp horaConcentracion;
-    private Integer multimedia_id; // Esto puede incluir varios archivos, puede ser otra lista
-    private Integer instalacion_id;
+    private Multimedia multimedia;
+    private Instalacion instalacion;
 
 
-    public void Entrenamiento (String nombre, Time duracion, String tipo, String listaEjercicios,
-                               Integer jugParticipantes, Date fecha, Timestamp horaInicio, Timestamp horaConcentracion,
-                               Integer multimedia_id, Integer instalacion_id) {
+    public void Entrenamiento (String nombre, Time duracion, TipoEntrenamiento tipoEntrenamiento, List<Ejercicio> ejercicios,
+                               List<Jugador> jugadores, Equipo equipo, LocalDate fecha, Timestamp horaInicio, Timestamp horaConcentracion,
+                               Multimedia multimedia, Instalacion instalacion) {
 
         this.nombre = nombre;
         this.duracion = duracion;
-        this.tipo = tipo;
-        this.listaEjercicios = listaEjercicios;
-        this.jugParticipantes = jugParticipantes;
+        this.tipoEntrenamiento = tipoEntrenamiento;
+        this.ejercicios = ejercicios;
+        this.jugadores = jugadores;
+        this.equipo = equipo;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaConcentracion = horaConcentracion;
-        this.multimedia_id = multimedia_id;
-        this.instalacion_id = instalacion_id;
+        this.multimedia = multimedia;
+        this.instalacion = instalacion;
     }
 
     public String getNombre() {
@@ -64,35 +67,43 @@ public class Entrenamiento {
         this.duracion = duracion;
     }
 
-    public String getTipo() {
-        return tipo;
+    public TipoEntrenamiento getTipoEntrenamiento() {
+        return tipoEntrenamiento;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoEntrenamiento(TipoEntrenamiento tipoEntrenamiento) {
+        this.tipoEntrenamiento = tipoEntrenamiento;
     }
 
-    public String getListaEjercicios() {
-        return listaEjercicios;
+    public List<Ejercicio> getEjercicios() {
+        return ejercicios;
     }
 
-    public void setListaEjercicios(String listaEjercicios) {
-        this.listaEjercicios = listaEjercicios;
+    public void setEjercicios(List<Ejercicio> ejercicios) {
+        this.ejercicios = ejercicios;
     }
 
-    public Integer getJugParticipantes() {
-        return jugParticipantes;
+    public List<Jugador> getJugadores() {
+        return jugadores;
     }
 
-    public void setJugParticipantes(Integer jugParticipantes) {
-        this.jugParticipantes = jugParticipantes;
+    public void setJugadores(List<Jugador> jugadores) {
+        this.jugadores = jugadores;
     }
 
-    public Date getFecha() {
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -112,19 +123,19 @@ public class Entrenamiento {
         this.horaConcentracion = horaConcentracion;
     }
 
-    public Integer getMultimedia_id() {
-        return multimedia_id;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
     }
 
-    public Integer getInstalacion_id() {
-        return instalacion_id;
+    public Instalacion getInstalacion() {
+        return instalacion;
     }
 
-    public void setInstalacion_id(Integer instalacion_id) {
-        this.instalacion_id = instalacion_id;
+    public void setInstalacion(Instalacion instalacion) {
+        this.instalacion = instalacion;
     }
 }

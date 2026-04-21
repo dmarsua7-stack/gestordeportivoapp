@@ -1,6 +1,7 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 import java.sql.Date;
+import java.util.List;
 
 public class Entrenador {
 
@@ -10,22 +11,24 @@ public class Entrenador {
     /// Modificar multimedia_id para que sea un objeto Multimedia multimedia;
     /// Modificar constructores para poner como parametros aquellos que sean estrictamente necesarios para crear un entrenador. Ejemplo: el equipo no es necesario.
     private Integer idEntrenador;
+    private String password;
     private String dniEntrenador;
     private String nombre;
     private String apellido01;
     private String apellido02;
     private Date fechaNac;
     private String especialidad; // Primer entrenador, Segundo, Delegado, Fisio, etc.
-    private String nivel; // Esto puede ser un enum
+    private String nivel; // Esto puede ser un enum - Categoria básica, regional, nacional... etc. (Cada deporte tiene sus niveles de conocimientos)
+    private List<Equipo> equipos;
     private String observaciones;
     private Date fechaRegistro; // Se debe añadir aquí un tlfn_id + email_id??
-    private String equipo_nombre; // Se debe unir por id?? Pq?
-    private Integer multimedia_id; // Foto del entrenador
+    private Multimedia multimedia; // Foto del entrenador
 
-    public Entrenador (String dniEntrenador, String nombre, String apellido01, String apellido02,
-                    Date fechaNac, String especialidad, String nivel, String observaciones, Date fechaRegistro,
-                    String equipo_nombre, Integer multimedia_id ) {
+    public Entrenador (String password, String dniEntrenador, String nombre, String apellido01, String apellido02,
+                    Date fechaNac, String especialidad, String nivel, List<Equipo> equipos , String observaciones, Date fechaRegistro,
+                   Multimedia multimedia) {
 
+        this.password = password;
         this.dniEntrenador = dniEntrenador;
         this.nombre = nombre;
         this.apellido01 = apellido01;
@@ -33,11 +36,25 @@ public class Entrenador {
         this.fechaNac= fechaNac;
         this.especialidad = especialidad;
         this.nivel = nivel;
+        this.equipos = equipos;
         this.observaciones = observaciones;
         this.fechaRegistro = fechaRegistro;
-        this.equipo_nombre = equipo_nombre;
-        this.multimedia_id = multimedia_id;
+        this.multimedia = multimedia;
     }
+
+    public Entrenador (String password, String dniEntrenador, String nombre, String apellido01, String apellido02,
+                       Date fechaNac, Date fechaRegistro) {
+
+        this.password = password;
+        this.dniEntrenador = dniEntrenador;
+        this.nombre = nombre;
+        this.apellido01 = apellido01;
+        this.apellido02 = apellido02;
+        this.fechaNac= fechaNac;
+        this.fechaRegistro = fechaRegistro;
+    }
+
+
 
     public Integer getIdEntrenador() {
         return idEntrenador;
@@ -45,6 +62,14 @@ public class Entrenador {
 
     public String getDniEntrenador() {
         return dniEntrenador;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setDniEntrenador(String dniEntrenador) {
@@ -99,6 +124,14 @@ public class Entrenador {
         this.nivel = nivel;
     }
 
+    public List<Equipo> getEquipos() {
+        return equipos;
+    }
+
+    public void setEquipos(List<Equipo> equipos) {
+        this.equipos = equipos;
+    }
+
     public String getObservaciones() {
         return observaciones;
     }
@@ -115,19 +148,11 @@ public class Entrenador {
         this.fechaRegistro = fechaRegistro;
     }
 
-    public String getEquipo_nombre() {
-        return equipo_nombre;
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setEquipo_nombre(String equipo_nombre) {
-        this.equipo_nombre = equipo_nombre;
-    }
-
-    public Integer getMultimedia_id() {
-        return multimedia_id;
-    }
-
-    public void setMultimedia_id(Integer multimedia_id) {
-        this.multimedia_id = multimedia_id;
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
     }
 }
