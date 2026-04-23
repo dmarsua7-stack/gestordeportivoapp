@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping ("/material")
 public class MaterialController {
 
-    @Autowired
+    @Autowired(required=true)
     private MaterialService service;
 
     @GetMapping
@@ -31,7 +31,7 @@ public class MaterialController {
 
     @PutMapping("/{idMaterial}")
     public Material actualizar(@PathVariable Integer idMaterial, @RequestBody Material material) {
-        return service.guardar(material);
+        return service.actualizar(material,idMaterial);
     }
 
     @DeleteMapping("/{idMaterial}")
