@@ -5,12 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class Instalacion {
 
     /// TODO: Sustituye Integer multimedia_id por Multimedia multimedia.
     ///
-    private Integer idInstalacion;
+ /*   private Integer idInstalacion;
     private String nombre;
     private String direccion;
     private String localidad;
@@ -71,5 +71,5 @@ public class Instalacion {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }
+    }*/
 }

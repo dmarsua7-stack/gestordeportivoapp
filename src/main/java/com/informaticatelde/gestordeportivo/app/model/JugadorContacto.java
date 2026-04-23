@@ -5,13 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class JugadorContacto {
     /// Esta clase relaciona un cotnacto con un jugador. La clase contacto tendrá toda la información del contacto, emails. telefonos.
     // Esto permite controlar los casos de contactos repetidos entre jugadores y marcar incluso contactos como principales
 
     ///  TODO: añadir Integer id, Jugador jugador, Contacto contacto.
-
+/*
     private Integer idJugadorContacto;
     private Jugador jugador;
     private Contacto contacto;
@@ -42,5 +42,5 @@ public class JugadorContacto {
 
     public void setContacto(Contacto contacto) {
         this.contacto = contacto;
-    }
+    }*/
 }

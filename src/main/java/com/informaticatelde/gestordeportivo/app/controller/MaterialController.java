@@ -11,8 +11,11 @@ import java.util.List;
 @RequestMapping ("/material")
 public class MaterialController {
 
-    @Autowired(required=true)
-    private MaterialService service;
+    private final MaterialService service;
+
+    public MaterialController(MaterialService materialService){
+        this.service = materialService;
+    }
 
     @GetMapping
     public List<Material> listar (){

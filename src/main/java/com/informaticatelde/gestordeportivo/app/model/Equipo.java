@@ -7,13 +7,13 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 
-@Entity
+//@Entity
 public class Equipo {
 
     /// TODO: Cambiar los Set por List. más simple y evitamos complejidad en los métodos.
     /// TODO: Cambiar Categoria por CategoriaEquipo y asi diferenciarlo de CategoriaHabilidad.
     /// TODO: Añadir listado de entrenamientos.
-
+/*
     private Integer idEquipo;
     private String nombre;
     private CategoriaEquipo categoriaEquipo;
@@ -103,5 +103,5 @@ public class Equipo {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }
+    }*/
 }

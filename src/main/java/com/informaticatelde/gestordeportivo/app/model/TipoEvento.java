@@ -5,11 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class TipoEvento {
 
     /// TODO: Elimina evento_id. No es necesario. Esa info se obtiene del evento.
-
+/*
     private Integer idTipoEvento;
     private String nombre;
     private String descripcion;
@@ -42,5 +42,5 @@ public class TipoEvento {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
+*/
 }

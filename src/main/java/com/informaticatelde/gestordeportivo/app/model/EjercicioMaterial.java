@@ -9,10 +9,10 @@ import jakarta.persistence.Id;
  * Clase que relaciona el ejercicio con el material y la cantidad necesaria para usarlo.
  */
 
-@Entity
+//@Entity
 public class EjercicioMaterial {
     /// TODO: Añadir idEjercicioMaterial, Ejercicio ejercicio, Material material, int cantidad.
-
+/*
     private Integer idEjercicioMaterial;
     private Ejercicio ejercicio;
     private Material material;
@@ -53,5 +53,5 @@ public class EjercicioMaterial {
 
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
-    }
+    }*/
 }

@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.time.LocalDate;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Jugador {
     /// TODO: Faltaria dirección.
     /// TODO: Sustituir Integer multimedia_id por Multimedia multimedia. Getter, setters y parametros.
@@ -16,7 +16,7 @@ public class Jugador {
     /// TODO: Eliminar categoria_id y subcategoria_id. Esto es info del equipo, no lo necesitamos en el jugador.
     /// TODO: Añadir lista de JugadorHabilidad habilidades.
     /// TODO: Añadir List<JugadorContacto> contactos.
-    private Integer idJugador;
+ /*   private Integer idJugador;
     private String dniJugador;
     private String nombre;
     private String apellido01;
@@ -161,5 +161,5 @@ public class Jugador {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }
+    }*/
 }

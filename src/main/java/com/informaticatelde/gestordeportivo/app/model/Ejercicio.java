@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.sql.Time;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Ejercicio {
     /// TODO: Elimina cantidad esto estará en EjercicioMaterial.
     /// TODO: Elimina nombreMaterial esto estará en EjercicioMaterial.
@@ -16,7 +16,7 @@ public class Ejercicio {
     /// TODO: Sustituye Integer categoria_id por CategoriaEjercicio categoriaEjercicio.
     /// TODO: Sustituye Integer habilidad_id por List<Habilidad> habilidades.
 
-
+/*
     private Integer idEjercicio;
     private String nombre;
     private String posicion;
@@ -122,5 +122,5 @@ public class Ejercicio {
 
     public void setImagenes(List<Multimedia> imagenes) {
         this.imagenes = imagenes;
-    }
+    }*/
 }

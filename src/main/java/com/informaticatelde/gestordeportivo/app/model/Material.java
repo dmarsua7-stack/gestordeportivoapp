@@ -1,9 +1,6 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Material {
@@ -11,12 +8,20 @@ public class Material {
     ///  TODO: eliminar cantidad y categoria.
     ///  TODO: Sustituir Integer multimedia_id por Multimedia multimedia.
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMaterial;
     private String nombre;
     private String descripcion;
-    private Multimedia multimedia;  // En MySql se describe como tipo MediumBlob
 
+    @OneToOne(cascade = CascadeType.ALL) // CascadeType.ALL significa que si borras el Material, se borra su Multimedia (opcional)
+    @JoinColumn(name = "multimedia_id") // Nombre de la columna en la tabla Material
+    private Multimedia multimedia;
+
+
+    public Material(){
+
+    }
 
     public Material (String nombre,String descripcion, Multimedia multimedia) {
         this.nombre = nombre;
@@ -25,10 +30,13 @@ public class Material {
 
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer getIdMaterial() {
         return idMaterial;
+    }
+
+    public void setIdMaterial(Integer idMaterial){
+        this.idMaterial = idMaterial;
     }
 
     public String getNombre() {

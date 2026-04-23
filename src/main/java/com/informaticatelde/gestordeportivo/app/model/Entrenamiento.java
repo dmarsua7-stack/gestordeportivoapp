@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 
-@Entity
+//@Entity
 public class Entrenamiento {
 ///  TODO: Sustituye Integer multimedia_id por Multimedia multimedia
 /// TODO: Sustituye Integer instalacion_id por Instalacion instalacion
@@ -23,7 +23,7 @@ public class Entrenamiento {
 /// TODO: Añade List<Ejercicio> ejercicios
 /// TODO: Falta por ver como añddir lo de la asistencia a los entrenamientos. Que me da que se tendrá que hacer en otra tabla.
 ///
-    private Integer idEntrenamiento;
+ /*   private Integer idEntrenamiento;
     private String nombre;
     private Time duracion;
     private TipoEntrenamiento tipoEntrenamiento; // Refernciar a que llamamos tipo de entrenamiento
@@ -147,5 +147,5 @@ public class Entrenamiento {
 
     public void setInstalacion(Instalacion instalacion) {
         this.instalacion = instalacion;
-    }
+    }*/
 }

@@ -9,12 +9,12 @@ import jakarta.persistence.Id;
  * Esta clase representa la categoria del ejercicio
  */
 
-@Entity
+//@Entity
 public class CategoriaEjercicio {
     /// TODO: Añadir Integer idCategoriaEjercicio.
     /// TODO: Añadir nombre, descripcion y Multimedia imagen.
 
-    private Integer idCategoriaEjercicio;
+   /* private Integer idCategoriaEjercicio;
     private String nombre;
     private String descripcion;
     private Multimedia imagen;
@@ -55,5 +55,5 @@ public class CategoriaEjercicio {
 
     public void setImagen(Multimedia imagen) {
         this.imagen = imagen;
-    }
+    }*/
 }

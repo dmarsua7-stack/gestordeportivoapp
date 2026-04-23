@@ -5,12 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class JugadorHabilidad {
     /// TODO: La clase JugadorHabilidad hay que crearla con un Integer idjugadorhabilidad, Jugador jugador, Habilidad habilidad, int puntuacion.
     /// TODO: Crear getter, setter y constructores.
 
-
+/*
     private Integer idJugadorHabilidad;
     private Jugador jugador;
     private Habilidad habilidad;
@@ -52,5 +52,5 @@ public class JugadorHabilidad {
 
     public void setPuntuacion(Integer puntuacion) {
         this.puntuacion = puntuacion;
-    }
+    }*/
 }

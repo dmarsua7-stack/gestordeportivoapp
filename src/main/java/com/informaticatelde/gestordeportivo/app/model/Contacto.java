@@ -10,11 +10,11 @@ import java.util.List;
 /**
  * Clase que contiene toda la información de contacto que puede tener un jugador.
  */
-@Entity
+//@Entity
 public class Contacto {
     /// TODO: Añadir Integer idContacto, nombre, apellido1, apellido2, List<Email> emails, List<Telefono> telefonos, List<JugadorContacto> jugadores.
     /// TODO: Añadir getter y setter y constructores.
-
+/*
     private Integer idContacto;
     private String nombre;
     private String apellido1;
@@ -88,5 +88,5 @@ public class Contacto {
 
     public void setJugadores(List<JugadorContacto> jugadores) {
         this.jugadores = jugadores;
-    }
+    }*/
 }

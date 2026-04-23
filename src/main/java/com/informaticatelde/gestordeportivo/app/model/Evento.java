@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity
+//@Entity
 public class Evento {
     /// Vamos a simplificar esta parte. Como ya tenemos una clase Instalación que tiene gran parte de esos cambios vamos a usarla.
     /// TODO: elimina ubicacion, direccion, localidad y gmaps y crea Instalacion instalacion. De esta forma es más simple y ordenado.
@@ -16,7 +16,7 @@ public class Evento {
     /// TODO: Sustituye Integer multimedia_id por Multimedia multimedia.
     /// TODO: Añade un Equipo equipo para asociar el evento al equipo.
     /// TODO: Usa LocalTime para los tiempos y LocalDate para las fechas en todas las clases. Son las que se usan ahora mismo en java.
-
+/*
     private Integer idEvento;
     private String nombre;
     private Instalacion instalacion;
@@ -110,5 +110,5 @@ public class Evento {
 
     public void setTipoEvento(TipoEvento tipoEvento) {
         this.tipoEvento = tipoEvento;
-    }
+    }*/
 }

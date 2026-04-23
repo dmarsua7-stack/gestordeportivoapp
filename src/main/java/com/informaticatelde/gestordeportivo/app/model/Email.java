@@ -5,11 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class Email {
 
     /// TODO: Elimina jugador_id y entrenador_id. Añade una nueva propiedad Contacto contacto sus getter y setters. Ajusta el constructor.
-
+/*
     private Integer idEmail;
     private String nombre; // Referente al tipo de email como: email propio, madre o padre.
     private String email;
@@ -52,6 +52,6 @@ public class Email {
 
     public void setContacto(Contacto contacto) {
         this.contacto = contacto;
-    }
+    }*/
 }
 

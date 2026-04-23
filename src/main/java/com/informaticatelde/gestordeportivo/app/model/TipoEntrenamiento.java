@@ -5,11 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class TipoEntrenamiento {
     /// TODO: Añadir idtipoentrenamiento, nombre, descripcion y multimedia
 
-
+/*
 
     private Integer idTipoEntrenamiento;
     private String nombre;
@@ -52,5 +52,5 @@ public class TipoEntrenamiento {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }
+    }*/
 }

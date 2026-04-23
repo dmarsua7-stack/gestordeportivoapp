@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.sql.Date;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Entrenador {
 
     /// TODO: Añadir listado para los equipos
@@ -16,7 +16,7 @@ public class Entrenador {
     /// TODO: Expicame especialidad y nivel
     /// Modificar multimedia_id para que sea un objeto Multimedia multimedia;
     /// Modificar constructores para poner como parametros aquellos que sean estrictamente necesarios para crear un entrenador. Ejemplo: el equipo no es necesario.
-    private Integer idEntrenador;
+  /*  private Integer idEntrenador;
     private String password;
     private String dniEntrenador;
     private String nombre;
@@ -161,5 +161,5 @@ public class Entrenador {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }
+    }*/
 }

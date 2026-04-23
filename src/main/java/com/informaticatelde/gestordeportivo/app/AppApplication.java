@@ -5,6 +5,7 @@ import com.informaticatelde.gestordeportivo.app.model.CategoriaEquipo;
 import com.informaticatelde.gestordeportivo.app.model.Equipo;
 import com.informaticatelde.gestordeportivo.app.model.Multimedia;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDate;
@@ -13,7 +14,10 @@ import java.time.LocalDate;
 public class AppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MaterialController.class, args);
+        SpringApplication app = new SpringApplication(AppApplication.class);
+        // ESTA LÍNEA ES LA SOLUCIÓN MANUAL
+        app.setWebApplicationType(WebApplicationType.SERVLET);
+        app.run(args);
 
 		/*CategoriaEquipo categoriaEquipo = new CategoriaEquipo("INFANTIL","Categoria de 12 a 14 años");
 		Equipo equipo = new Equipo("CD LAS BRUJAS", categoriaEquipo);

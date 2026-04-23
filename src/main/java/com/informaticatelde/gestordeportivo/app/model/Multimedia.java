@@ -11,13 +11,15 @@ import java.time.LocalDate;
 @Entity
 public class Multimedia {
     /// TODO: faltaria añadir String url para la url de la imagen.
-
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer idMultimedia;
     private String nombre;
     private String descripcion;
     private LocalDate fechaCarga;
     private String url;
 
+    public Multimedia(){}
 
 
     public Multimedia (String nombre, String descripcion, LocalDate fechaCarga, String url) {
@@ -29,10 +31,13 @@ public class Multimedia {
 
 
     }
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+
     public Integer getIdMultimedia() {
         return idMultimedia;
+    }
+
+    public void setIdMultimedia(Integer idMultimedia){
+        this.idMultimedia= idMultimedia;
     }
 
     public String getNombre() {
