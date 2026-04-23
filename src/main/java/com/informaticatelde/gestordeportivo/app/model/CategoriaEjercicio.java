@@ -1,8 +1,15 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 /**
  * Esta clase representa la categoria del ejercicio
  */
+
+@Entity
 public class CategoriaEjercicio {
     /// TODO: Añadir Integer idCategoriaEjercicio.
     /// TODO: Añadir nombre, descripcion y Multimedia imagen.
@@ -20,6 +27,8 @@ public class CategoriaEjercicio {
 
     }
 
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     public Integer getIdCategoriaEjercicio() {
         return idCategoriaEjercicio;
     }

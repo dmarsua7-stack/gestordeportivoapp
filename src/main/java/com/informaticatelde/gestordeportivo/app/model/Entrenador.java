@@ -1,8 +1,14 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.sql.Date;
 import java.util.List;
 
+@Entity
 public class Entrenador {
 
     /// TODO: Añadir listado para los equipos
@@ -55,7 +61,8 @@ public class Entrenador {
     }
 
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdEntrenador() {
         return idEntrenador;
     }

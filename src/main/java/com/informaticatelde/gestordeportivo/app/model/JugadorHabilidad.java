@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class JugadorHabilidad {
     /// TODO: La clase JugadorHabilidad hay que crearla con un Integer idjugadorhabilidad, Jugador jugador, Habilidad habilidad, int puntuacion.
     /// TODO: Crear getter, setter y constructores.
@@ -18,6 +24,8 @@ public class JugadorHabilidad {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdJugadorHabilidad() {
         return idJugadorHabilidad;
     }

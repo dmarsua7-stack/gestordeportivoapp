@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class TipoEntrenamiento {
     /// TODO: Añadir idtipoentrenamiento, nombre, descripcion y multimedia
 
@@ -18,6 +24,8 @@ public class TipoEntrenamiento {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdTipoEntrenamiento() {
         return idTipoEntrenamiento;
     }

@@ -1,8 +1,14 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.sql.Time;
 import java.util.List;
 
+@Entity
 public class Ejercicio {
     /// TODO: Elimina cantidad esto estará en EjercicioMaterial.
     /// TODO: Elimina nombreMaterial esto estará en EjercicioMaterial.
@@ -40,7 +46,8 @@ public class Ejercicio {
 
 
     }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdEjercicio() {
         return idEjercicio;
     }

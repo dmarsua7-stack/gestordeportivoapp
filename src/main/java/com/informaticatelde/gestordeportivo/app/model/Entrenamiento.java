@@ -1,11 +1,18 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.List;
 
+
+@Entity
 public class Entrenamiento {
 ///  TODO: Sustituye Integer multimedia_id por Multimedia multimedia
 /// TODO: Sustituye Integer instalacion_id por Instalacion instalacion
@@ -47,16 +54,19 @@ public class Entrenamiento {
         this.instalacion = instalacion;
     }
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Integer getIdEntrenamiento() {
+        return idEntrenamiento;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Integer getIdEntrenamiento() {
-        return idEntrenamiento;
     }
 
     public Time getDuracion() {

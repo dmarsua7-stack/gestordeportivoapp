@@ -1,18 +1,26 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import java.sql.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import java.time.LocalDate;
+
+@Entity
 public class Multimedia {
     /// TODO: faltaria añadir String url para la url de la imagen.
+
     private Integer idMultimedia;
     private String nombre;
     private String descripcion;
-    private Date fechaCarga;
+    private LocalDate fechaCarga;
     private String url;
 
 
 
-    public Multimedia (String nombre, String descripcion, Date fechaCarga, String url) {
+    public Multimedia (String nombre, String descripcion, LocalDate fechaCarga, String url) {
 
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -21,7 +29,8 @@ public class Multimedia {
 
 
     }
-
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     public Integer getIdMultimedia() {
         return idMultimedia;
     }
@@ -42,11 +51,11 @@ public class Multimedia {
         this.descripcion = descripcion;
     }
 
-    public Date getFechaCarga() {
+    public LocalDate getFechaCarga() {
         return fechaCarga;
     }
 
-    public void setFechaCarga(Date fechaCarga) {
+    public void setFechaCarga(LocalDate fechaCarga) {
         this.fechaCarga = fechaCarga;
     }
 

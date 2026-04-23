@@ -1,5 +1,10 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Email {
 
     /// TODO: Elimina jugador_id y entrenador_id. Añade una nueva propiedad Contacto contacto sus getter y setters. Ajusta el constructor.
@@ -18,6 +23,8 @@ public class Email {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdEmail() {
         return idEmail;
     }

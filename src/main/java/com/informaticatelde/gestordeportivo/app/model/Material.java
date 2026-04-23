@@ -1,9 +1,16 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+
+@Entity
 public class Material {
     ///  TODO: Vamos a simplificarlo. Vamos a tener nombre, descripcion y multimedia
     ///  TODO: eliminar cantidad y categoria.
     ///  TODO: Sustituir Integer multimedia_id por Multimedia multimedia.
+
 
     private Integer idMaterial;
     private String nombre;
@@ -18,6 +25,8 @@ public class Material {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdMaterial() {
         return idMaterial;
     }

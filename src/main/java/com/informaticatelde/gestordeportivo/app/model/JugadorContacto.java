@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class JugadorContacto {
     /// Esta clase relaciona un cotnacto con un jugador. La clase contacto tendrá toda la información del contacto, emails. telefonos.
     // Esto permite controlar los casos de contactos repetidos entre jugadores y marcar incluso contactos como principales
@@ -16,7 +22,8 @@ public class JugadorContacto {
         this.contacto = contacto;
 
     }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdJugadorContacto() {
         return idJugadorContacto;
     }

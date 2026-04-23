@@ -1,10 +1,16 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
 /**
  * Clase que contiene toda la información de contacto que puede tener un jugador.
  */
+@Entity
 public class Contacto {
     /// TODO: Añadir Integer idContacto, nombre, apellido1, apellido2, List<Email> emails, List<Telefono> telefonos, List<JugadorContacto> jugadores.
     /// TODO: Añadir getter y setter y constructores.
@@ -30,7 +36,8 @@ public class Contacto {
 
     }
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdContacto() {
         return idContacto;
     }

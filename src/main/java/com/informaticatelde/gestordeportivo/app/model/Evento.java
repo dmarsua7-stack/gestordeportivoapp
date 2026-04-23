@@ -1,8 +1,14 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Entity
 public class Evento {
     /// Vamos a simplificar esta parte. Como ya tenemos una clase Instalación que tiene gran parte de esos cambios vamos a usarla.
     /// TODO: elimina ubicacion, direccion, localidad y gmaps y crea Instalacion instalacion. De esta forma es más simple y ordenado.
@@ -36,6 +42,8 @@ public class Evento {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdEvento() {
         return idEvento;
     }

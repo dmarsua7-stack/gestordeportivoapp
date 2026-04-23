@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Habilidad {
     /// TODO: Se simplifica con la creacion de los otros objetos JugadorHabilidad
     /// TODO: Sustituir String categoria por CategoriaEjercicio categoria.
@@ -20,6 +26,8 @@ public class Habilidad {
         this.imagen = imagen;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdHabilidad() {
         return idHabilidad;
     }

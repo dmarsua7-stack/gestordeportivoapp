@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Instalacion {
 
     /// TODO: Sustituye Integer multimedia_id por Multimedia multimedia.
@@ -21,10 +27,11 @@ public class Instalacion {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdInstalacion() {
         return idInstalacion;
     }
-
 
     public String getNombre() {
         return nombre;

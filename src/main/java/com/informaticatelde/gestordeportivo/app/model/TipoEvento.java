@@ -1,5 +1,11 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class TipoEvento {
 
     /// TODO: Elimina evento_id. No es necesario. Esa info se obtiene del evento.
@@ -15,6 +21,8 @@ public class TipoEvento {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdTipoEvento() {
         return idTipoEvento;
     }

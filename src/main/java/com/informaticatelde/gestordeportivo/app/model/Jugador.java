@@ -1,9 +1,14 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import java.sql.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity
 public class Jugador {
     /// TODO: Faltaria dirección.
     /// TODO: Sustituir Integer multimedia_id por Multimedia multimedia. Getter, setters y parametros.
@@ -48,10 +53,11 @@ public class Jugador {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdJugador() {
         return idJugador;
     }
-
 
     public String getDniJugador() {
         return dniJugador;
