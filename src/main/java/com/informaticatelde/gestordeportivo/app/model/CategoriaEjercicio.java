@@ -1,29 +1,30 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 /**
  * Esta clase representa la categoria del ejercicio
  */
 
-//@Entity
+@Entity
 public class CategoriaEjercicio {
     /// TODO: Añadir Integer idCategoriaEjercicio.
     /// TODO: Añadir nombre, descripcion y Multimedia imagen.
 
-   /* private Integer idCategoriaEjercicio;
+    private Integer idCategoriaEjercicio;
     private String nombre;
     private String descripcion;
-    private Multimedia imagen;
+    private Multimedia multimedia;
 
-    public CategoriaEjercicio (String nombre, String descripcion, Multimedia imagen) {
+    public CategoriaEjercicio (){
+
+    }
+
+    public CategoriaEjercicio (String nombre, String descripcion, Multimedia multimedia) {
 
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.imagen = imagen;
+        this.multimedia = multimedia;
 
     }
 
@@ -31,6 +32,10 @@ public class CategoriaEjercicio {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     public Integer getIdCategoriaEjercicio() {
         return idCategoriaEjercicio;
+    }
+
+    public void setIdCategoriaEjercicio(Integer idCategoriaEjercicio) {
+        this.idCategoriaEjercicio = idCategoriaEjercicio;
     }
 
     public String getNombre() {
@@ -49,11 +54,13 @@ public class CategoriaEjercicio {
         this.descripcion = descripcion;
     }
 
-    public Multimedia getImagen() {
-        return imagen;
+    @OneToOne(cascade = CascadeType.ALL) // CascadeType.ALL significa que si borras el Material, se borra su Multimedia (opcional)
+    @JoinColumn(name = "multimedia_id") // Nombre de la columna en la tabla Material
+    public Multimedia getMultimedia() {
+        return multimedia;
     }
 
-    public void setImagen(Multimedia imagen) {
-        this.imagen = imagen;
-    }*/
+    public void setMultimedia(Multimedia multimedia) {
+        this.multimedia = multimedia;
+    }
 }

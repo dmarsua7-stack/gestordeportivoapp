@@ -1,6 +1,8 @@
 package com.informaticatelde.gestordeportivo.app.controller;
 
 import com.informaticatelde.gestordeportivo.app.model.Multimedia;
+import com.informaticatelde.gestordeportivo.app.service.MultimediaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
 @RequestMapping ("/multimedia")
 public class MultimediaController {
 
-/*
+
     @Autowired
     private MultimediaService service;
 
@@ -30,15 +32,7 @@ public class MultimediaController {
 
     @PutMapping("/{idMultimedia}")
     public Multimedia actualizar(@PathVariable Integer idMultimedia, @RequestBody Multimedia multimedia) {
-        Multimedia existente = service.getById(idMultimedia);
-        if (existente == null) return null;
-
-        existente.setNombre(Multimedia.getNombre());
-        existente.setDescripcion(Multimedia.getDescripcion());
-        existente.setFechaCarga(Multimedia.getFechaCarga());
-        existente.setUrl(Multimedia.getUrl());
-
-        return service.guardar(existente);
+        return service.actualizar(multimedia,idMultimedia);
     }
 
     @DeleteMapping("/{idMultimedia}")
@@ -46,6 +40,6 @@ public class MultimediaController {
         service.eliminar(idMultimedia);
     }
 
-*/
+
 
 }

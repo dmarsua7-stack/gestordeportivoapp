@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MaterialRepositorio extends JpaRepository<Material, Integer> {
+public interface MaterialRepository extends JpaRepository<Material, Integer> {
 
     List<Material> findByNombre(String nombre);
 

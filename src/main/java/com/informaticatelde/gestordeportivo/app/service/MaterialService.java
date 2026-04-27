@@ -1,7 +1,7 @@
 package com.informaticatelde.gestordeportivo.app.service;
 
 import com.informaticatelde.gestordeportivo.app.model.Material;
-import com.informaticatelde.gestordeportivo.app.repository.MaterialRepositorio;
+import com.informaticatelde.gestordeportivo.app.repository.MaterialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class MaterialService {
 
     @Autowired
-    private MaterialRepositorio repositorio;
+    private MaterialRepository repositorio;
 
 
     public List<Material> listar() {

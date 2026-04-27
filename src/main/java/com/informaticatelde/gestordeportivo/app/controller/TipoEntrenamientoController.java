@@ -1,24 +1,29 @@
 package com.informaticatelde.gestordeportivo.app.controller;
 
 import com.informaticatelde.gestordeportivo.app.model.TipoEntrenamiento;
+import com.informaticatelde.gestordeportivo.app.service.TipoEntrenamientoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@RestController
+@RequestMapping ("/entrenamiento/tipo")
 public class TipoEntrenamientoController {
 
 
-    // @Autowired
-    // private MultimediaService service;
+    @Autowired
+    private TipoEntrenamientoService service;
 
-   /* @GetMapping
+   @GetMapping
     public List<TipoEntrenamiento> listar (){
         return service.listar();
     }
 
-    @GetMapping("/entrenamiento/tipo/lista/{idTipoEntrenamiento}")
-    public TipoEntrenamiento getById(@PathVariable Integer idTipoEntrenamiento) {
-        return service.getById(idTipoEntrenamiento);
+    @GetMapping("/{idTipoEntrenamiento}")
+    public TipoEntrenamiento buscarPorId(@PathVariable Integer idTipoEntrenamiento) {
+        return service.buscarPorId(idTipoEntrenamiento);
     }
 
     @PostMapping
@@ -27,15 +32,9 @@ public class TipoEntrenamientoController {
     }
 
     @PutMapping("/{idTipoEntrenamiento}")
-    public TipoEntrenamiento actualizar(@PathVariable Integer idTipoEntrenamiento, @RequestBody TipoEntrenamiento tipo) {
-        TipoEntrenamiento existente = service.getById(TipoEntrenamiento);
-        if (existente == null) return null;
+    public TipoEntrenamiento actualizar(@PathVariable Integer idTipoEntrenamiento, @RequestBody TipoEntrenamiento tipoEntrenamiento) {
 
-        existente.setNombre(TipoEntrenamiento.getNombre());
-        existente.setDescripcion(TipoEntrenamiento.getDescripcion());
-        existente.setMultimedia(TipoEntrenamiento.getMultimedia());
-
-        return service.guardar(existente);
+        return service.actualizar(tipoEntrenamiento,idTipoEntrenamiento);
     }
 
     @DeleteMapping("/{idTipoEntrenamiento}")
@@ -43,6 +42,5 @@ public class TipoEntrenamientoController {
         service.eliminar(idTipoEntrenamiento);
     }
 
-*/
 
 }

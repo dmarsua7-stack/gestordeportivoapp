@@ -5,14 +5,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-//@Entity
+@Entity
 public class CategoriaEquipo {
     /// TODO: Refactorizar la clase y llamarla CategoriEquipo
     /// TODO: Eliminar la propiedad Equipo. No la necesitamos en esta clase. Solo dejamos idCategoriaEquipo, nombre y descripcion.
-/*
+
     private Integer idCategoriaEquipo;
     private String nombre;
     private String descripcion;
+
+    public CategoriaEquipo() {
+
+    }
 
     public CategoriaEquipo(String nombre, String descripcion) {
 
@@ -25,6 +29,10 @@ public class CategoriaEquipo {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     public Integer getIdCategoria() {
         return idCategoriaEquipo;
+    }
+
+    public void setIdCategoriaEquipo(Integer idCategoriaEquipo) {
+        this.idCategoriaEquipo = idCategoriaEquipo;
     }
 
     public String getNombre() {
@@ -42,6 +50,6 @@ public class CategoriaEquipo {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-*/
+
 }
 

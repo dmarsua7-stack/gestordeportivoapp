@@ -1,6 +1,7 @@
 package com.informaticatelde.gestordeportivo.app.controller;
 
 import com.informaticatelde.gestordeportivo.app.model.CategoriaEjercicio;
+import com.informaticatelde.gestordeportivo.app.service.CategoriaEjercicioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,15 +11,20 @@ import java.util.List;
 public class CategoriaEjercicioController {
 
 
-    // @Autowired
-    // private MultimediaService service;
-/*
+
+    private final CategoriaEjercicioService service;
+
+    public CategoriaEjercicioController (CategoriaEjercicioService service){
+        this.service = service;
+    }
+
+
     @GetMapping
     public List<CategoriaEjercicio> listar (){
         return service.listar();
     }
 
-    @GetMapping("/categoria/ejercicio/lista/{idCategoriaEjercicio}")
+    @GetMapping("/{idCategoriaEjercicio}")
     public CategoriaEjercicio getById(@PathVariable Integer idCategoriaEjercicio) {
         return service.getById(idCategoriaEjercicio);
     }
@@ -30,14 +36,8 @@ public class CategoriaEjercicioController {
 
     @PutMapping("/{idCategoriaEjercicio}")
     public CategoriaEjercicio actualizar(@PathVariable Integer idCategoriaEjercicio, @RequestBody CategoriaEjercicio categoria) {
-        CategoriaEjercicio existente = service.getById(idCategoriaEjercicio);
-        if (existente == null) return null;
 
-        existente.setNombre(CategoriaEjercicio.getNombre());
-        existente.setDescripcion(CategoriaEjercicio.getDescripcion());
-        existente.setImagen(CategoriaEjercicio.getImagen());
-
-        return service.guardar(existente);
+        return service.actualizar(categoria, idCategoriaEjercicio);
     }
 
     @DeleteMapping("/{idCategoriaEjercicio}")
@@ -46,7 +46,7 @@ public class CategoriaEjercicioController {
     }
 
 
-*/
+
 
 
 }
