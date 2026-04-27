@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class HabilidadService {
-
+/*
     @Autowired
     private HabilidadRepository repositorio;
 
@@ -43,6 +43,6 @@ public class HabilidadService {
         }
     }
 
-
+*/
 
 }

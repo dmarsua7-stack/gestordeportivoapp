@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/habilidad")
 public class HabilidadController {
-
+/*
     private final HabilidadService service;
 
     public HabilidadController(HabilidadService habilidadService){
@@ -41,6 +41,6 @@ public class HabilidadController {
     public void eliminar(@PathVariable Integer idHabilidad) {
         service.eliminar(idHabilidad);
     }
-
+*/
 
 }

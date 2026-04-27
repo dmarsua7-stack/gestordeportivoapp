@@ -1,9 +1,6 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class TipoEntrenamiento {
@@ -13,8 +10,16 @@ public class TipoEntrenamiento {
     private Integer idTipoEntrenamiento;
     private String nombre;
     private String descripcion;
+
+    @OneToOne(cascade = CascadeType.ALL) // CascadeType.ALL significa que si borras el Material, se borra su Multimedia (opcional)
+    @JoinColumn(name = "multimedia_id")
     private Multimedia multimedia;
 
+
+
+    public TipoEntrenamiento (){
+
+    }
 
     public TipoEntrenamiento (String nombre, String descripcion, Multimedia multimedia){
         this.nombre = nombre;

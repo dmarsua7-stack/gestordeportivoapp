@@ -5,13 +5,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
+
 public class Habilidad {
     /// TODO: Se simplifica con la creacion de los otros objetos JugadorHabilidad
     /// TODO: Sustituir String categoria por CategoriaEjercicio categoria.
     /// TODO: Añadir Multimedia imagen. Puede ser util.
     /// TODO: Eliminar jugador_id, subcategoria y ejercicio_id.Ya esta información se obtiene de las clases importantes.
-
+/*
     private Integer idHabilidad;
     private String nombre; // Designación de la habilidad
     private String descripcion; // Descripción detallada de la habilidad
@@ -26,8 +27,8 @@ public class Habilidad {
         this.multimedia = multimedia;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  //  @Id
+  //  @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getIdHabilidad() {
         return idHabilidad;
     }
@@ -67,4 +68,6 @@ public class Habilidad {
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
     }
+
+ */
 }

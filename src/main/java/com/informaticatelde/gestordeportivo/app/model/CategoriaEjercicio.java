@@ -14,6 +14,9 @@ public class CategoriaEjercicio {
     private Integer idCategoriaEjercicio;
     private String nombre;
     private String descripcion;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "multimedia_id")
     private Multimedia multimedia;
 
     public CategoriaEjercicio (){
