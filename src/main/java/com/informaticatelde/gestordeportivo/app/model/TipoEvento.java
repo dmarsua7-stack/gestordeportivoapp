@@ -10,6 +10,8 @@ public class TipoEvento {
 
     /// TODO: Elimina evento_id. No es necesario. Esa info se obtiene del evento.
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idTipoEvento;
     private String nombre;
     private String descripcion;
@@ -21,8 +23,7 @@ public class TipoEvento {
 
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer getIdTipoEvento() {
         return idTipoEvento;
     }

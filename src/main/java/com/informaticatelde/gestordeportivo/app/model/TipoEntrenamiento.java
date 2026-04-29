@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 public class TipoEntrenamiento {
     /// TODO: Añadir idtipoentrenamiento, nombre, descripcion y multimedia
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idTipoEntrenamiento;
     private String nombre;
     private String descripcion;
@@ -28,8 +29,7 @@ public class TipoEntrenamiento {
 
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer getIdTipoEntrenamiento() {
         return idTipoEntrenamiento;
     }

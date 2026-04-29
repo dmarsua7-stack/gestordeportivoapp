@@ -10,6 +10,9 @@ public class CategoriaEquipo {
     /// TODO: Refactorizar la clase y llamarla CategoriEquipo
     /// TODO: Eliminar la propiedad Equipo. No la necesitamos en esta clase. Solo dejamos idCategoriaEquipo, nombre y descripcion.
 
+
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer idCategoriaEquipo;
     private String nombre;
     private String descripcion;
@@ -25,11 +28,10 @@ public class CategoriaEquipo {
 
     }
 
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    public Integer getIdCategoria() {
+    public Integer getIdCategoriaEquipo() {
         return idCategoriaEquipo;
     }
+
 
     public void setIdCategoriaEquipo(Integer idCategoriaEquipo) {
         this.idCategoriaEquipo = idCategoriaEquipo;

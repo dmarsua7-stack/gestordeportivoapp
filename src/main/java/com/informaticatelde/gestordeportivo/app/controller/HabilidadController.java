@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/habilidad")
+//@RestController
+//@RequestMapping("/habilidad")
 public class HabilidadController {
 /*
     private final HabilidadService service;

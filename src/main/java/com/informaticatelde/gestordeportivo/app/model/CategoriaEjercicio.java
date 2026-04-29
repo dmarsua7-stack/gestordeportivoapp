@@ -11,6 +11,8 @@ public class CategoriaEjercicio {
     /// TODO: Añadir Integer idCategoriaEjercicio.
     /// TODO: Añadir nombre, descripcion y Multimedia imagen.
 
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer idCategoriaEjercicio;
     private String nombre;
     private String descripcion;
@@ -31,8 +33,7 @@ public class CategoriaEjercicio {
 
     }
 
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+
     public Integer getIdCategoriaEjercicio() {
         return idCategoriaEjercicio;
     }
@@ -57,8 +58,6 @@ public class CategoriaEjercicio {
         this.descripcion = descripcion;
     }
 
-    @OneToOne(cascade = CascadeType.ALL) // CascadeType.ALL significa que si borras el Material, se borra su Multimedia (opcional)
-    @JoinColumn(name = "multimedia_id") // Nombre de la columna en la tabla Material
     public Multimedia getMultimedia() {
         return multimedia;
     }

@@ -1,22 +1,29 @@
 package com.informaticatelde.gestordeportivo.app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-//@Entity
+@Entity
 public class Instalacion {
 
     /// TODO: Sustituye Integer multimedia_id por Multimedia multimedia.
     ///
- /*   private Integer idInstalacion;
+    ///
+    ///
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idInstalacion;
     private String nombre;
     private String direccion;
     private String localidad;
     private String gmaps;
+    @ManyToOne
+    @JoinColumn(name = "multimedia_id_multimedia")
     private Multimedia multimedia;
 
+
+    public void Instalacion () {
+
+    }
 
     public void Instalacion (String nombre, String direccion, String localidad, String gmaps, Multimedia multimedia) {
         this.nombre = nombre;
@@ -27,10 +34,13 @@ public class Instalacion {
 
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer getIdInstalacion() {
         return idInstalacion;
+    }
+
+    public void setIdInstalacion(Integer idInstalacion) {
+        this.idInstalacion = idInstalacion;
     }
 
     public String getNombre() {
@@ -71,5 +81,5 @@ public class Instalacion {
 
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
-    }*/
+    }
 }
